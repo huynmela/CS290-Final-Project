@@ -1,82 +1,128 @@
-h1 {
-  display: flex;
-  justify-content: center;
-  font-size: 48px;
+.line {
+    height: 40px;
+    width: 2px;
+    background: #fff;
+    margin: 0;
+    position: absolute;
+    left: 88%;
+    top: 25%;
 }
 
-h3 {
-  font-size: 24px;
-  font-style: italic;
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
 }
+
+.marvel-logo {
+    /* The image used */
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/05087aaf-05ed-41db-a48c-f961106f2066/dcopqxu-dc200331-f204-4c69-b2f5-71d2425eea04.png/v1/fill/w_1192,h_670,strp/marvel_studios_wallpaper_4k_by_szymeksw_dcopqxu-pre.png");
+    min-height: 400px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.navbar-container .icon {
+    display: none;
+}
+
+/* Position the navbar container inside the image */
+.navbar-container {
+    position: relative;
+    width: 100%;
+}
+
+/* The navbar */
+.navbar-items {
+    overflow: auto;
+    background-color: black;
+}
+
+    /* Navbar links */
+    .navbar-items a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .navbar-items a:hover {
+            background-color: rgb(68, 68, 68);
+            color: white;
+        }
+
+    /* Style the search box inside the navigation bar */
+    .navbar-items input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+    }
 
 .movie-container {
-    margin: 50px 10%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.movie-listing {
-    flex: 0 1 20%;
-    min-width: 355px;
-    //display: flex;
+    min-height: 300px;
     margin: 2px;
-    padding: 20px;
-    border: 1.5px solid #f2f2f2;
-    border-radius: 2px;
-    background-color: #ff3535
-}
-
-.movie-listing-image {
-    font-size: 300px
-}
-
-.movie-title {
-    flex: 1 1 80%;
-    text-align: left;
-    font-weight: bold;
-} 
-
-.movie-desc {
-    flex: 1 1 80%;
-    text-align: left;
-    font-weight: bold;
+    padding: 10px;
+    display: flex; /* can also do inline-flex */
+    /* flex-direction: column; turns vertical axis into the main axis, row makes them lign up left to right */
+    /* flex-dirction: row-reverse; --> swaps the start and end of the items so the items go in opposite order
+    /* flex-direction: column-revese; --> changes main axis to horizontal and reverses the start and end */
+    flex-direction: row;
+    flex-wrap: wrap; /* if the flex container shrinks enough then this will make the elements move downward so you can keep seeing them all */
+    justify-content: space-around; /* all the spaces between 2 flex items will have an equal amount of space between the items but doesnt apply to the out edges
+    justify-content: flex-start; essential a left align if the direction is row- control how flex items line up on the axis 
+    justify-content: flex-end; --> items push to right with row as the flex-direction 
+    justify-content: center; --> centers it 
+    justify-content: space-around; --> all spaces around does equal parts of the outside edges */
 }
 
 .news-feed {
-  background-color: #f2f2f2;
-  margin: 10px;
-  padding: 8px;
-  padding-left: 20px;
-  padding-top: 0px;
+    background-color: #f2f2f2;
+    margin: 2px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
+
+
 .articles {
-  font-size: 24px;
-  font-style: italic;
+    font-size: 24px;
 }
 
 .memes {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow: auto;
-
-  white-space: nowrap;
-  max-height: 570px;
-  align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    font-size: 24px;
+    white-space: nowrap;
+    max-height: 570px;
+    align-items: stretch;
 }
 
 .meme {
-  padding: 5px 25px;
-  max-height: 450px;
+    padding: 5px 25px;
+    max-height: 450px;
 }
 
 a {
-  color: #343434;
-  text-decoration: none;
-  padding: 3px;
+    color: #343434;
+    text-decoration: none;
+    padding: 3px;
 }
 
-a:hover,
-a:focus {
-  color: #f0131e;
-}
+    a:hover,
+    a:focus {
+        color: #f0131e;
+    }
