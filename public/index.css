@@ -1,128 +1,130 @@
-.line {
-    height: 40px;
-    width: 2px;
-    background: #fff;
-    margin: 0;
-    position: absolute;
-    left: 88%;
-    top: 25%;
-}
-
+/* section headers */
 h1 {
-    color: black;
-    text-align: center;
-    font-size: 36px;
-    font-style: italic;
+  color: black;
+  text-align: center;
+  font-size: 36px;
+  font-style: italic;
 }
 
+/* background picture on navbar */
 .marvel-logo {
-    /* The image used */
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/05087aaf-05ed-41db-a48c-f961106f2066/dcopqxu-dc200331-f204-4c69-b2f5-71d2425eea04.png/v1/fill/w_1192,h_670,strp/marvel_studios_wallpaper_4k_by_szymeksw_dcopqxu-pre.png");
-    min-height: 400px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Needed to position the navbar */
-    position: relative;
-}
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/05087aaf-05ed-41db-a48c-f961106f2066/dcopqxu-dc200331-f204-4c69-b2f5-71d2425eea04.png/v1/fill/w_1192,h_670,strp/marvel_studios_wallpaper_4k_by_szymeksw_dcopqxu-pre.png");
+  min-height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
 
-/* Hide the link that should open and close the topnav on small screens */
-.navbar-container .icon {
-    display: none;
-}
-
-/* Position the navbar container inside the image */
 .navbar-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
-/* The navbar */
 .navbar-items {
-    overflow: auto;
-    background-color: black;
+  overflow: auto;
+  background-color: black;
 }
 
-    /* Navbar links */
-    .navbar-items a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }
+.navbar-items a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-        .navbar-items a:hover {
-            background-color: rgb(68, 68, 68);
-            color: white;
-        }
+.navbar-items a:hover {
+  background-color: rgb(177, 175, 175);
+  color: black;
+}
 
-    /* Style the search box inside the navigation bar */
-    .navbar-items input[type=text] {
-        float: right;
-        padding: 6px;
-        border: none;
-        margin-top: 8px;
-        margin-right: 16px;
-        font-size: 17px;
-    }
+.navbar-items a.active {
+  background-color:rgb(56, 56, 56);
+  color:white;
+}
 
+.navbar-container .search-container {
+  float: right;
+}
+
+/* search bar inside navbar */
+.navbar-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  background-color: rgb(56, 56, 56);
+  color: rgb(204, 204, 204);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* search bar button */
+.navbar-container .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: rgb(96, 96, 96);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: rgb(204, 204, 204);
+}
+
+.navbar-container .search-container button:hover {
+  background: rgb(73, 73, 73);
+}
+
+/* top rated movies section */
 .movie-container {
-    min-height: 300px;
-    margin: 2px;
-    padding: 10px;
-    display: flex; /* can also do inline-flex */
-    /* flex-direction: column; turns vertical axis into the main axis, row makes them lign up left to right */
-    /* flex-dirction: row-reverse; --> swaps the start and end of the items so the items go in opposite order
-    /* flex-direction: column-revese; --> changes main axis to horizontal and reverses the start and end */
-    flex-direction: row;
-    flex-wrap: wrap; /* if the flex container shrinks enough then this will make the elements move downward so you can keep seeing them all */
-    justify-content: space-around; /* all the spaces between 2 flex items will have an equal amount of space between the items but doesnt apply to the out edges
-    justify-content: flex-start; essential a left align if the direction is row- control how flex items line up on the axis 
-    justify-content: flex-end; --> items push to right with row as the flex-direction 
-    justify-content: center; --> centers it 
-    justify-content: space-around; --> all spaces around does equal parts of the outside edges */
+  min-height: 300px;
+  margin: 2px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
+/* news feed section */
 .news-feed {
-    background-color: #f2f2f2;
-    margin: 2px;
-    padding: 8px;
-    padding-left: 20px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+  background-color: #f2f2f2;
+  margin: 2px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-top: 1px;
+  padding-bottom:1px;
 }
-
-
 
 .articles {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .memes {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: auto;
-    font-size: 24px;
-    white-space: nowrap;
-    max-height: 570px;
-    align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+  font-size: 24px;
+  white-space: nowrap;
+  max-height: 570px;
+  align-items: stretch;
 }
 
 .meme {
-    padding: 5px 25px;
-    max-height: 450px;
+  padding: 5px 25px;
+  max-height: 450px;
 }
 
 a {
-    color: #343434;
-    text-decoration: none;
-    padding: 3px;
+  color: #343434;
+  text-decoration: none;
+  padding: 3px;
 }
 
-    a:hover,
-    a:focus {
-        color: #f0131e;
-    }
+a:hover,
+a:focus {
+  color: #f0131e;
+}
