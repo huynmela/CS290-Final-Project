@@ -1,33 +1,48 @@
-<!DOCTYPE = html>
-<html>
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
   <head>
-  
+    <title>Marvel Fanbase</title>
     <meta charset="utf-8">
-    <title>Marvel Fan Site</title>
-    
+    <meta name="keywords" content="A community for Marvel fans everywhere!">
+    <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
+    <link rel="stylesheet" href="/index.css">
+
+    <!--This is a 3rd-party stylesheet for search button icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- This is 3rd-party stylesheet to make available the font family to be used for this page ("Roboto"). -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <!-- This 3rd-party stylesheet incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="index.css" media="screen"> <!--refers to the css for the home page-->
-
-    <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
-
   </head>
-
+	
   <header>
-    <h1><a href="/index.html">Site Title</a></h1>
-
-    <nav class="navbar">
-      <ul class="navlist">
-        <li class="navitem navlink">We</li>
-	<li class="navitem navlink">Are</li>
-	<li class="navitem navlink">Nav</li>
-	<li class="navitem navlink">Items</li>
-      </ul>
+    <nav class="marvel-logo">
+      <div class="navbar-container">
+        <div class="navbar-items">
+	  <a id="nav-home" href="/">Home</a>
+	  <a id="nav-movies" href="/movies">Movies</a>
+	  <a id="nav-register" href="#CreateAccount">Create Account</a>
+	  <a id="nav-signin" href="#SignIn">Sign In</a>
+	  <div class="search-container">
+	    <form action="/action_page.php">
+	      <input type="text" id="nav-search-input" placeholder="Search..." name="search">
+	      <button type="submit" id="nav-search-button"><i class="fa fa-search"></i></button>
+	    </form>
+	  </div>
+        </div>
+      </div>
     </nav>
   </header>
 
   <body>
     {{{body}}}
   </body>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">Footer text, maybe include our names and the year/class this was made for?</p>
+    </div>
+  </footer>
+
 </html>

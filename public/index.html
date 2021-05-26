@@ -1,224 +1,231 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;">
+
 <head>
-
-    <meta charset="utf-8">
     <title>Marvel Fanbase</title>
-
+    <meta charset="utf-8">
+    <meta name="keywords" content="A community for Marvel fans everywhere!">
+    <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
+    <link rel="stylesheet" href="index.css">
+    
+    <!--This is a 3rd-party stylesheet for search button icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- This is 3rd-party stylesheet to make available the font family to be used for this page ("Roboto"). -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <!-- This 3rd-party stylesheet incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
-
-    <meta name="keywords" content="A community for Marvel fans everywhere!">
-
-    <link rel="stylesheet" href="index.css" media="screen"> <!--refers to the css for the home page-->
-
-    <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
-
 </head>
 
 <body>
 
-    <header>
-        <a href="home"><h1 class="site-title"><i class="fas fa-ticket-alt"></i>Marvel Fan Site</h1></a> <!--temporary icon from font awesome-->
+<!--class for navbar inside background image-->
 
-        <nav class="navbar">
-            <ul class="navlist">
-                <li class="navitem navlink active"><a href="#">HOME</a></li> <!--need to add hyperlink to index-->
-                <li class="navitem navlink"><a href="#">FAVORITES</a></li> <!--need hyperlink to favorites-->
-                <li class="navitem navlink"><a href="#">SIGN IN</a></li> <!--need hyperlink to sign in-->
-                <li class="navitem navlink"><a href="#">CREATE ACCOUNT</a></li> <!--need hyperlink to create account-->
-                <li class="navitem navbar-search">
-                    <!--search bar-->
-                    <input type="text" id="navbar-search-input" placeholder="Search...">
-                    <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <!--class for movies on a horizontal scroller-->
-
-    <h2 class="movie-section-title">Most Popular Movies</h2>
-
-    <!--class for movie listings-->
-
-    <main class="movie-container">
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://m.media-amazon.com/images/I/910t9BoIymL._AC_SL1500_.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Spiderman: Far From Home
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/A1inGqJJHXL._AC_SL1500_.jpg" alt="" width="350" height="420"/>
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Avengers: Endgame
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/A1CcbJfKqJL.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Spiderman: Homecoming
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71K3S%2BTk4OL._AC_SL1303_.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Captain Marvel
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/61a03Zq9oRL._AC_.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Black Panther
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/A11Agdd1EQL._AC_SL1500_.jpg" alt="" width="350" height="420"/>
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Guardians of the Galaxy Vol. 2
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71gyLVWIfIL._AC_SL1032_.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Doctor Strange
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Guardians of the Galaxy
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-        <article class="movie-listing">
-            <div class="movie-listing-image">
-                <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="350" height="420" />
-            </div>
-            <div class="movie-title">
-            <p class="movie-title-text">
-                Guardians of the Galaxy
-            </p>
-            <p class="movie-desc">
-                This is a description.
-            </p>
-            </div>
-        </article>
-
-    </main>
-
-    <article class="news-feed">
-        <h1><i>Marvel News Feed</i></h1>
-        <div class="articles">
-            <h3>Articles</h3>
-            <ul type=circle>
-                <li><a href="https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" target="_blank">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe </a></li>
-                <li><a href="https://www.marvel.com/articles/movies/marvel-studios-celebrates-movies" target="_blank">Marvel Studios Celebrates the Movies</a></li>
-                <li><a href="https://www.marvel.com/articles/movies/eternals-first-look-celebrate-movies" target="_blank">'Eternals First Look Reveals New Team of Super Heroes in Globetrotting Adventure</a></li>
-            </ul>
+<nav class="marvel-logo">
+    <div class="navbar-container">
+        <div class="navbar-items">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Movies">Movies</a>
+        <a href="#CreateAccount">Create Account</a>
+        <a href="#SignIn">Sign In</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search..." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
         </div>
-        <div class="memes">
-            <h3>Memes</h3>
-            <img class="meme" src="https://pm1.narvii.com/6313/4ad7ba5a92283bb466402b3be2ba78f782887897_hq.jpg"/>
-            <img class="meme" src="https://bestofcomicbooks.com/wp-content/uploads/2018/04/final-feature-98.jpg"/>
-            <img class="meme" src="https://funnypicsonly.com/wp-content/uploads/2018/06/Hilarious-Marvel-Memes-That-Will-Make-You-Laugh-21.jpg"/>
+    </div>
+</nav>
+
+<!--class for movies on a horizontal scroller-->
+
+<h1 class="movie-section-title"><i>Top Rated Movies</i></h1>
+
+<!--class for movie listings-->
+
+<main class="movie-container">
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://m.media-amazon.com/images/I/910t9BoIymL._AC_SL1500_.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Spiderman: Far From Home
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
         </div>
     </article>
 
-    <!--MODAL FOR SIGN IN-->
-    <div id="modal-backdrop" class="hidden"></div>
-    <div id="sign-in-modal" class="hidden">
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <h3>Sign in to your account.</h3>
-                <button type="button" class="modal-sign-in-button">&times;</button>
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/A1inGqJJHXL._AC_SL1500_.jpg" alt="" width="350" height="420"/>
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Avengers: Endgame
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/A1CcbJfKqJL.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Spiderman: Homecoming
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71K3S%2BTk4OL._AC_SL1303_.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Captain Marvel
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61a03Zq9oRL._AC_.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Black Panther
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/A11Agdd1EQL._AC_SL1500_.jpg" alt="" width="350" height="420"/>
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Guardians of the Galaxy Vol. 2
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71gyLVWIfIL._AC_SL1032_.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Doctor Strange
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Guardians of the Galaxy
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+    <article class="movie-listing">
+        <div class="movie-listing-image">
+            <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="350" height="420" />
+        </div>
+        <div class="movie-title">
+        <p class="movie-title-text">
+            Guardians of the Galaxy
+        </p>
+        <p class="movie-desc">
+            This is a description.
+        </p>
+        </div>
+    </article>
+
+</main>
+
+<!--class for marvel news feed-->
+
+<article class="news-feed">
+    <h1><i>Marvel News Feed</i></h1>
+    <div class="articles">
+        <h3>Articles</h3>
+        <ul type=circle>
+            <li><a href="https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" target="_blank">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe </a></li>
+            <li><a href="https://www.marvel.com/articles/movies/marvel-studios-celebrates-movies" target="_blank">Marvel Studios Celebrates the Movies</a></li>
+            <li><a href="https://www.marvel.com/articles/movies/eternals-first-look-celebrate-movies" target="_blank">'Eternals First Look Reveals New Team of Super Heroes in Globetrotting Adventure</a></li>
+        </ul>
+    </div>
+    <div class="memes">
+        <h3>Memes</h3>
+        <img class="meme" src="https://pm1.narvii.com/6313/4ad7ba5a92283bb466402b3be2ba78f782887897_hq.jpg"/>
+        <img class="meme" src="https://bestofcomicbooks.com/wp-content/uploads/2018/04/final-feature-98.jpg"/>
+        <img class="meme" src="https://funnypicsonly.com/wp-content/uploads/2018/06/Hilarious-Marvel-Memes-That-Will-Make-You-Laugh-21.jpg"/>
+    </div>
+</article>
+
+<!--MODAL FOR SIGN IN-->
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="sign-in-modal" class="hidden">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Sign in to your account.</h3>
+            <button type="button" class="modal-sign-in-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="username-input-element">
+            <label for="username-text-input">Username</label>
+            <textarea id="username-text-input"></textarea>
             </div>
-            <div class="modal-body">
-                <div class="username-input-element">
-                <label for="username-text-input">Username</label>
-                <textarea id="username-text-input"></textarea>
-                </div>
-                <div class="username-input-element">
-                    <label for="password-input">Password</label>
-                    <input type="text" id="password-input" />
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="modal-cancel-button">Cancel</button>
-                <button type="button" class="modal-sign-in-button">Sign in</button>
+            <div class="username-input-element">
+                <label for="password-input">Password</label>
+                <input type="text" id="password-input" />
             </div>
         </div>
+        <div class="modal-footer">
+            <button type="button" class="modal-cancel-button">Cancel</button>
+            <button type="button" class="modal-sign-in-button">Sign in</button>
+        </div>
     </div>
+</div>
 
-    <footer class="footer"><div class="footer-content">
-        <p class="footer-text>Footer text, maybe include our names and the year/class this was made for?</p>
-        </div></footer>
+<!--class for footer-->
+
+<footer class="footer">
+    <div class="footer-content">
+    <p class="footer-text">Footer text, maybe include our names and the year/class this was made for?</p>
+    </div>
+</footer>
+
 </body>
 </html>

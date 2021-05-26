@@ -15,6 +15,11 @@ var userList = [];
 
 let curUser;
 
+app.get('*', function(req, res, next) {
+  pageType.pageType = 'page';
+  next();
+})
+
 app.get('/', function(req, res) {
   res.render('home');
 })
