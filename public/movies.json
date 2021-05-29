@@ -1,50 +1,66 @@
 {
   "spiderman2":
   {
-    "photo": "https://m.media-amazon.com/images/I/910t9BoIymL._AC_SL1500_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/b/bd/Spider-Man_Far_From_Home_poster.jpg",
     "title": "Spiderman: Far From Home",
-    "desc": "This is a description"
+    "desc": "This is a description",
+    "releaseDate": "20190626",
+    "settingDate": "202406"
   },
   "spiderman1":
   {
-    "photo": "https://images-na.ssl-images-amazon.com/images/I/A1CcbJfKqJL.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg",
     "title": "Spiderman: Homecoming",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20170628",
+    "settingDate": "201608"
   },
   "captainMarvel":
   {
-    "photo": "https://images-na.ssl-images-amazon.com/images/I/71K3S%2BTk4OL._AC_SL1303_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/8/85/Captain_Marvel_poster.jpg",
     "title": "Captain Marvel",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20190308",
+    "settingDate": "199500"
   },
   "blackPanther":
   {
-    "photo": "https://images-na.ssl-images-amazon.com/images/I/61a03Zq9oRL._AC_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg",
     "title": "Black Panther",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20180216",
+    "settingDate": "201601"
   },
   "gotg2":
   {
-    "photo": "https://images-na.ssl-images-amazon.com/images/I/A11Agdd1EQL._AC_SL1500_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/a/ab/Guardians_of_the_Galaxy_Vol_2_poster.jpg",
     "title": "Guardians of the Galaxy Vol. 2",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20170505",
+    "settingDate": "201401"
   },
   "doctorStrange":
   {
-    "photo": "https://images-na.ssl-images-amazon.com/images/I/71gyLVWIfIL._AC_SL1032_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/c/c7/Doctor_Strange_poster.jpg",
     "title": "Doctor Strange",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20161104",
+    "settingDate": "201611"
   },
   "gotg1":
   {
-    "photo": "https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/b/b5/Guardians_of_the_Galaxy_poster.jpg",
     "title": "Guardians of the Galaxy",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20140801",
+    "settingDate": "201400"
   },
   "avengersEndgame":
   {
-    "photo": "https://images-na.ssl-images-amazon.com/images/I/A1inGqJJHXL._AC_SL1500_.jpg",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
     "title": "Avengers: Endgame",
-    "desc": "This is a description."
+    "desc": "This is a description.",
+    "releaseDate": "20190426",
+    "settingDate": "202300"
   }
 }
