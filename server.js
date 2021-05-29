@@ -10,7 +10,7 @@ app.set('view engine', 'handlebars');
 
 var pageType = {"pageType":"page"};			//This is a variable we can change to give more specific 404 error messages
 
-var movieList = require('./movies.json');					//These lists will pull from a JSON file in full implementation
+var movieList = require('./public/movies.json');					//These lists will pull from a JSON file in full implementation
 var userList = [];
 
 let curUser;

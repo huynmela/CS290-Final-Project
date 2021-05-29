@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "build": "handlebars movieTile.handlebars -f public/movieTileTemplate.js",
-    "prestart": "npm run build"
+    "start": "node server.js"
+
   },
   "repository": {
     "type": "git",
