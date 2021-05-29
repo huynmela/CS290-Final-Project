@@ -38,3 +38,12 @@ function updateActiveTab() {
     navMovies.classList.add("active");
   }
 }
+
+function createMovieCard(photoUrl, movieTitle, movieDesc){
+  var templateContext = {
+    photo: photoUrl,
+    title: movieTitle,
+    desc: movieDesc
+  }
+  Handlebars.templates.movieTile(templateContext)
+}
