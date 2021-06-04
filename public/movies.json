@@ -5,7 +5,8 @@
     "title": "Spiderman: Far From Home",
     "desc": "This is a description",
     "releaseDate": "20190626",
-    "settingDate": "202406"
+    "settingDate": "202406",
+    "favorite": false
   },
   "spiderman1":
   {
@@ -13,7 +14,8 @@
     "title": "Spiderman: Homecoming",
     "desc": "This is a description.",
     "releaseDate": "20170628",
-    "settingDate": "201608"
+    "settingDate": "201608",
+    "favorite": true
   },
   "captainMarvel":
   {
@@ -21,7 +23,8 @@
     "title": "Captain Marvel",
     "desc": "This is a description.",
     "releaseDate": "20190308",
-    "settingDate": "199500"
+    "settingDate": "199500",
+    "favorite": true
   },
   "blackPanther":
   {
@@ -29,7 +32,8 @@
     "title": "Black Panther",
     "desc": "This is a description.",
     "releaseDate": "20180216",
-    "settingDate": "201601"
+    "settingDate": "201601",
+    "favorite": false
   },
   "gotg2":
   {
@@ -37,7 +41,8 @@
     "title": "Guardians of the Galaxy Vol. 2",
     "desc": "This is a description.",
     "releaseDate": "20170505",
-    "settingDate": "201401"
+    "settingDate": "201401",
+    "favorite": true
   },
   "doctorStrange":
   {
@@ -45,7 +50,8 @@
     "title": "Doctor Strange",
     "desc": "This is a description.",
     "releaseDate": "20161104",
-    "settingDate": "201611"
+    "settingDate": "201611",
+    "favorite": false
   },
   "gotg1":
   {
@@ -53,7 +59,8 @@
     "title": "Guardians of the Galaxy",
     "desc": "This is a description.",
     "releaseDate": "20140801",
-    "settingDate": "201400"
+    "settingDate": "201400",
+    "favorite": true
   },
   "avengersEndgame":
   {
@@ -61,6 +68,7 @@
     "title": "Avengers: Endgame",
     "desc": "This is a description.",
     "releaseDate": "20190426",
-    "settingDate": "202300"
+    "settingDate": "202300",
+    "favorite": false
   }
 }
