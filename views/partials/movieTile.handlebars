@@ -6,4 +6,9 @@
     <p class="movie-desc">
         {{desc}}
     </p>
+    {{#if favorite}}
+      <button class="fav-button"><i class="fa fa-star"></i></button>
+    {{else}}
+      <button class="fav-button"><i class="fa fa-times-circle"></i></button>
+    {{/if}}
 </article>
