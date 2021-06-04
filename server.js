@@ -21,7 +21,7 @@ app.get('*', function(req, res, next) {
 })
 
 app.get('/', function(req, res) {
-  res.render('home');
+  res.render('home', movieList);
 })
 
 app.get('/movies', function(req, res) {

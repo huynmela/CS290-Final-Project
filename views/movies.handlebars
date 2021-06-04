@@ -1,8 +1,9 @@
 <h2>This is the movies page!</h2>
 
-
-{{#each this}}
-  {{#if photo}}
-    {{>movieTile}}
-  {{/if}}
-{{/each}}
+<main class="movie-container">
+  {{#each this}}
+    {{#if photo}}
+      {{>movieTile}}
+    {{/if}}
+  {{/each}}
+</main>

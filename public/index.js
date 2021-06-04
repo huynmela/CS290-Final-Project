@@ -34,7 +34,7 @@ function updateActiveTab() {
   console.log("== The current pathname is", window.location.pathname);
   if (window.location.pathname == "/") {
     navHome.classList.add("active");
-  } else if (window.location.pathname == "/movies") {
+  } else if (window.location.pathname.toLowerCase() == "/movies") {
     navMovies.classList.add("active");
   }
 }
