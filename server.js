@@ -30,7 +30,9 @@ app.get('/movies', function(req, res) {
 
 app.get('/movies/:Title', function (req, res, next) {
   for (var i = 0; i < movieList.length; i++) {
-    if (movieList[i].title == req.params.Title) {
+    console.log("movieList[i].title: ", movieList[i].url);
+    console.log("req.params.Title: ", req.params.Title)
+    if (movieList[i].url == req.params.Title) {
       res.render('movieDetails', movieList[i]);
     }
   }
