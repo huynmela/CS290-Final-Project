@@ -146,6 +146,11 @@ h3 {
   border-radius: 25px;
 }
 
+/* individual movie thumbnails/descriptions */
+.movie-listing {
+  max-width: 370px;
+}
+
 /* news feed section */
 .news-feed {
   background-color: darkgray;
@@ -221,4 +226,3 @@ footer {
   margin-top: 23px;
 }
 
-/* login modal section */
