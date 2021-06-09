@@ -21,26 +21,27 @@ app.get('*', function(req, res, next) {
 })
 
 app.get('/', function(req, res) {
-  res.render('home', movieList);
+  res.status(200).render('home', movieList);
 })
 
 app.get('/movies', function(req, res) {
-  res.render('movies', movieList);
+  res.status(200).render('movies', movieList);
 })
 
 app.get('/movies/:Title', function (req, res, next) {
   var Title = req.params.Title
   if (movieList[Title]) {
-    res.render('movieDetails', movieList[Title]);
-  }
+    res.status(200).render('movieDetails', movieList[Title]);
+  } else {
   pageType.pageType = 'film';
   next();
+  }
 })
 
 app.get('/profile/:Name', function (req, res, next) {
   for (var i = 0; i < userList.length; i++) {
     if (userList[i].name == req.params.Name) {
-      res.render('profile', userList[i]);
+      res.status(200).render('profile', userList[i]);
     }
   }
   pageType.pageType = 'profile';
@@ -50,7 +51,7 @@ app.get('/profile/:Name', function (req, res, next) {
 app.use(express.static('public'));
 
 app.get('*', function(req, res) {
-  res.render('404', pageType);
+  res.status(400).render('404', pageType);
 })
 
 app.listen(port, function() {
