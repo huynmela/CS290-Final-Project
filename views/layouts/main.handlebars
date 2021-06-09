@@ -24,61 +24,54 @@
     {{/if}}
 </head>
 
-<body>
+<body style="background-color: black;">
 
-    <!--class for navbar inside background image-->
+    <!--class for navbar-->
 
-    <nav class="marvel-logo">
-        <div class="navbar-container">
-            <div class="navbar-items">
-                <a href="/" id="nav-home">Home</a>
-                <a href="/Movies" id="nav-movies">Movies</a>
-                <a href="/CreateAccount" id="nav-register">Create Account</a>
-                <a href="/SignIn" id="nav-signin">Sign In</a>
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input id="nav-search-input" type="text" placeholder="Search..." name="search">
-                        <button type="submit" id="nav-search-button"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    
-    {{{body}}}
-    
-
-    <!--MODAL FOR SIGN IN-->
-
-    <div id="modal-backdrop" class="hidden"></div>
-    <div id="sign-in-modal" class="hidden">
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <h3>Sign in to your account.</h3>
-                <button type="button" class="modal-sign-in-button">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="username-input-element">
-                    <label for="username-text-input">Username</label>
-                    <textarea id="username-text-input"></textarea>
-                </div>
-                <div class="username-input-element">
-                    <label for="password-input">Password</label>
-                    <input type="text" id="password-input" />
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="modal-cancel-button">Cancel</button>
-                <button type="button" class="modal-sign-in-button">Sign in</button>
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-items" id="navbar-items">
+            <a href="/" id="nav-home">Home</a>
+            <a href="/Movies" id="nav-movies">Movies</a>
+            <a id="nav-register">Create Account</a>
+            <a id="nav-signin">Sign In</a>
+            <div id="search-container">
+                <form action="/action_page.php">
+                    <input id="nav-search-input" type="text" placeholder="Search..." name="search">
+                    <button type="submit" id="nav-search-button"><i class="fa fa-search"></i></button>
+                </form>
             </div>
         </div>
     </div>
 
+    <div class="marvel-logo">
+        <img scr="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/05087aaf-05ed-41db-a48c-f961106f2066/dcopqxu-dc200331-f204-4c69-b2f5-71d2425eea04.png/v1/fill/w_1192,h_670,strp/marvel_studios_wallpaper_4k_by_szymeksw_dcopqxu-pre.png">
+    </div>
+
+
+    {{{body}}}
+    
+
+    <!--section for modal-->
+    <div class="modal-body">
+        <div class="popup" id="PopUp">
+	    <div class="content" id="popup-content">
+	        <!--cancel button-->
+		<div class="button-close" id="popup-x">×</div>
+		<!--login form-->
+		<h2 class="type-signin" id="popup-type">Sign in</h2>
+		<div class="email-and-password-input" id="username-text-input"><input placeholder="Email" class="validate"></div>
+		<div class="email-and-password-input" id="password-input"><input placeholder="Password" class="validate"></div>
+		<button class="modal-sign-in-button" id="popup-submit">Submit</button>
+		<p id="popup-toggle-prompt">Don't have an account? <strong id="popup-toggle-button">Create One!</strong></p>
+													            </div>
+														        </div>
+															</div>
+
+
     <!--class for footer-->
     <footer class="footer">
         <div class="footer-content">
-        <p>Web Development  |  Spring 2021  |  Null  |  Luke  |  Melanie  |  Emilie</p>
+            <p>Web Development  |  Spring 2021  |  Null  |  Luke  |  Melanie  |  Emilie</p>
         </div>
     </footer>
 
