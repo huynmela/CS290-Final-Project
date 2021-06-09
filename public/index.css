@@ -58,7 +58,7 @@ h3 {
   background-color: rgba(120, 120, 120, 0.37);
   border-radius: 10px;
   border-bottom-left-radius:0px;
-  border-bottom-right-radius:0px;  
+  border-bottom-right-radius:0px;
 }
 
 .navbar-items a {
@@ -129,13 +129,20 @@ h3 {
 }
 
 /* chronological timeline section */
+.chronological-timeline {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
 .chronological-timeline img {
+  border: 1px black;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  padding-top: 45px;
-  height: 600px;
+  padding-top: 15px;
+  height: 125px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -218,11 +225,11 @@ a:focus {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:horizontal {
-  background: rgb(114, 114, 114); 
+  background: rgb(114, 114, 114);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background:black; 
+  background:black;
 }
 
 /* footer section */
