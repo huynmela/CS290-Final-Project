@@ -95,3 +95,63 @@ function favToggle(index) {
 
   req.send();
 }
+
+function titleMatchesQuery(title, search) {
+  /*
+   * An empty query matches all twits.
+   */
+  if (!search) {
+    return true;
+  }
+
+  /*
+   * The search query matches the twit if either the twit's text or the twit's
+   * author contains the search query.
+   */
+  search = search.trim().toLowerCase();
+  return (movie.title + " " + movie.desc).toLowerCase().indexOf(search) >= 0;
+}
+
+function updateSearch() {
+  /*
+   * Grab the search query from the navbar search box.
+   */
+  var search = document.getElementById('navbar-search-input').value;
+
+  /*
+   * Remove all twits from the DOM temporarily.
+   */
+  var movieHolder = document.querySelector('.movie-container');
+  if (movieHolder) {
+    while (movieHolder.lastChild) {
+      movieHolder.removeChild(movieHolder.lastChild);
+    }
+  }
+
+  /*
+   * Loop through the collection of all twits and add twits back into the DOM
+   * if they match the current search query.
+   */
+  movieData.forEach(function (movie) {
+    if (twitMatchesSearchQuery(movie, search)) {
+      createMovieCard(movie.photo, movie.title, movie.desc);
+    }
+  });
+}
+
+/*
+ * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
+ */
+window.addEventListener('DOMContentLoaded', function () {
+  console.log("DOM Content is loaded")
+  var searchButton = document.getElementById('nav-search-button');
+  if (searchButton) {
+    console.log("Search button successfully located")
+    searchButton.addEventListener('click', updateSearch);
+  }
+
+  var searchInput = document.getElementById('nav-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', updateSearch);
+  }
+});
