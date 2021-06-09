@@ -4,14 +4,13 @@
 <head>
     <title>Marvel Fanbase</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="A community for Marvel fans everywhere!">
     <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
     <script src="movieTileTemplate.js" charset="utf-8" defer></script><!--allows access to createMovieTile in index.js-->
     <script src="https://cdn.jsdeliver.net/npm/handlebars@latest/lib/index.min.js" charset="utf-8" defer></script>
     <!--^Above script allows for use of handlebars templating-->
-
     <link rel="stylesheet" href="index.css">
-
     <!--This is a 3rd-party stylesheet for search button icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- This is 3rd-party stylesheet to make available the font family to be used for this page ("Roboto"). -->
@@ -20,38 +19,44 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: black;">
 
 <!--class for navbar inside background image-->
 
-<nav class="marvel-logo">
-    <div class="navbar-container">
-        <div class="navbar-items">
-        <a class="active" href="#Home">Home</a>
-        <a href="#Movies">Movies</a>
-        <a href="#CreateAccount">Create Account</a>
-        <a href="#SignIn">Sign In</a>
-        <div class="search-container">
-            <form action="/action_page.php">
-              <input type="text" placeholder="Search..." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-          </div>
+<div class="navbar-container">
+    <div class="navbar-items">
+    <a class="active" href="#Home">Home</a>
+    <a href="#Movies">Movies</a>
+    <a href="#CreateAccount">Create Account</a>
+    <a href="#SignIn">Sign In</a>
+    <div class="search-container">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
         </div>
     </div>
-</nav>
+</div>
 
-<!--class for movies on a horizontal scroller-->
+<div class="marvel-logo">
+    <img scr="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/05087aaf-05ed-41db-a48c-f961106f2066/dcopqxu-dc200331-f204-4c69-b2f5-71d2425eea04.png/v1/fill/w_1192,h_670,strp/marvel_studios_wallpaper_4k_by_szymeksw_dcopqxu-pre.png">
+</div>
+
+<!--class for timeline-->
+<h1>Chronological Order of Infinity Series</h1>
+
+    <div class="chronological-timeline">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/24562711-1410-46bf-b0a9-8b6656ed40ac/dbvfwxe-4e49c495-7b15-485d-bdb5-2cc19dcc740e.jpg/v1/fill/w_1024,h_576,q_75,strp/marvel_cinematic_universe_timeline_by_sp_goji_fan_dbvfwxe-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC8yNDU2MjcxMS0xNDEwLTQ2YmYtYjBhOS04YjY2NTZlZDQwYWNcL2RidmZ3eGUtNGU0OWM0OTUtN2IxNS00ODVkLWJkYjUtMmNjMTlkY2M3NDBlLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FihCuOx0S3bW1EhdklO_B3lhY3x_asM0reiEulzIgRs">
+    </div>
 
 <h1 class="movie-section-title"><i>Top Rated Movies</i></h1>
 
 <!--class for movie listings-->
-
 <main class="movie-container">
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://m.media-amazon.com/images/I/910t9BoIymL._AC_SL1500_.jpg" alt="" width="350" height="420" />
+            <img src="https://m.media-amazon.com/images/I/910t9BoIymL._AC_SL1500_.jpg" alt="" width="300" height="420" />
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -61,11 +66,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/A1inGqJJHXL._AC_SL1500_.jpg" alt="" width="350" height="420"/>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/A1inGqJJHXL._AC_SL1500_.jpg" alt="" width="300" height="420"/>
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -75,11 +80,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/A1CcbJfKqJL.jpg" alt="" width="350" height="420" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/A1CcbJfKqJL.jpg" alt="" width="300" height="420" />
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -89,11 +94,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71K3S%2BTk4OL._AC_SL1303_.jpg" alt="" width="350" height="420" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71K3S%2BTk4OL._AC_SL1303_.jpg" alt="" width="300" height="420" />
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -103,11 +108,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/61a03Zq9oRL._AC_.jpg" alt="" width="350" height="420" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61a03Zq9oRL._AC_.jpg" alt="" width="300" height="420" />
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -117,11 +122,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/A11Agdd1EQL._AC_SL1500_.jpg" alt="" width="350" height="420"/>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/A11Agdd1EQL._AC_SL1500_.jpg" alt="" width="300" height="420"/>
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -131,11 +136,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71gyLVWIfIL._AC_SL1032_.jpg" alt="" width="350" height="420" />
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71gyLVWIfIL._AC_SL1032_.jpg" alt="" width="300" height="420" border-radius="10" />
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -145,11 +150,11 @@
             This is a description.
         </p>
         </div>
-    </article>
+    </div>
 
-    <article class="movie-listing">
+    <div class="movie-listing">
         <div class="movie-listing-image">
-            <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="350" height="420" />
+            <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="300" height="420" />
         </div>
         <div class="movie-title">
         <p class="movie-title-text">
@@ -159,75 +164,32 @@
             This is a description.
         </p>
         </div>
-    </article>
-
-    <article class="movie-listing">
-        <div class="movie-listing-image">
-            <img src="https://m.media-amazon.com/images/I/71lbFfxfMtL._AC_SY741_.jpg" alt="" width="350" height="420" />
-        </div>
-        <div class="movie-title">
-        <p class="movie-title-text">
-            Guardians of the Galaxy
-        </p>
-        <p class="movie-desc">
-            This is a description.
-        </p>
-        </div>
-    </article>
+    </div>
 
 </main>
 
 <!--class for marvel news feed-->
+<h1><i>Marvel News Feed</i></h1>
 
-<article class="news-feed">
-    <h1><i>Marvel News Feed</i></h1>
+<div class="news-feed">
+    <h3>Articles</h3>
     <div class="articles">
-        <h3>Articles</h3>
-        <ul type=circle>
-            <li><a href="https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" target="_blank">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe </a></li>
-            <li><a href="https://www.marvel.com/articles/movies/marvel-studios-celebrates-movies" target="_blank">Marvel Studios Celebrates the Movies</a></li>
-            <li><a href="https://www.marvel.com/articles/movies/eternals-first-look-celebrate-movies" target="_blank">'Eternals First Look Reveals New Team of Super Heroes in Globetrotting Adventure</a></li>
-        </ul>
+        <p><a href="https://www.marvel.com/articles/movies/marvel-studios-celebrates-movies" target="_blank">Marvel Studios Celebrates the Movies</a></p>
+        <p><a href="https://www.marvel.com/articles/movies/eternals-first-look-celebrate-movies" target="_blank">'Eternals First Look Reveals New Team of Super Heroes in Globetrotting Adventure</a></p>
+        <p><a href="https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" target="_blank">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe </a></p>
     </div>
+    <h3>Memes</h3>
     <div class="memes">
-        <h3>Memes</h3>
         <img class="meme" src="https://pm1.narvii.com/6313/4ad7ba5a92283bb466402b3be2ba78f782887897_hq.jpg"/>
         <img class="meme" src="https://bestofcomicbooks.com/wp-content/uploads/2018/04/final-feature-98.jpg"/>
         <img class="meme" src="https://funnypicsonly.com/wp-content/uploads/2018/06/Hilarious-Marvel-Memes-That-Will-Make-You-Laugh-21.jpg"/>
     </div>
-</article>
-
-<!--MODAL FOR SIGN IN-->
-
-<div id="modal-backdrop" class="hidden"></div>
-<div id="sign-in-modal" class="hidden">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Sign in to your account.</h3>
-            <button type="button" class="modal-sign-in-button">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="username-input-element">
-            <label for="username-text-input">Username</label>
-            <textarea id="username-text-input"></textarea>
-            </div>
-            <div class="username-input-element">
-                <label for="password-input">Password</label>
-                <input type="text" id="password-input" />
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="modal-cancel-button">Cancel</button>
-            <button type="button" class="modal-sign-in-button">Sign in</button>
-        </div>
-    </div>
 </div>
 
 <!--class for footer-->
-
 <footer class="footer">
     <div class="footer-content">
-    <p class="footer-text">Footer text, maybe include our names and the year/class this was made for?</p>
+    <p>Web Development  |  Spring 2021  |  Null  |  Luke  |  Melanie  |  Emilie</p>
     </div>
 </footer>
 
