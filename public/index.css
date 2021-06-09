@@ -1,4 +1,8 @@
 /* section headers */
+body{
+    background-color: black;
+}
+
 h1 {
   background-color: rgba(120, 120, 120, 0.37);
   color: white;
@@ -7,6 +11,13 @@ h1 {
   font-style: italic;
   border-radius: 25px;
   padding: 15px;
+}
+
+h2 {
+    color: white;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
 }
 
 h3 {

@@ -1,4 +1,9 @@
-<!--class for movies on a horizontal scroller-->
+<!--class for timeline-->
+<h1>Chronological Order of Infinity Series</h1>
+
+<div class="chronological-timeline">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/24562711-1410-46bf-b0a9-8b6656ed40ac/dbvfwxe-4e49c495-7b15-485d-bdb5-2cc19dcc740e.jpg/v1/fill/w_1024,h_576,q_75,strp/marvel_cinematic_universe_timeline_by_sp_goji_fan_dbvfwxe-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzYiLCJwYXRoIjoiXC9mXC8yNDU2MjcxMS0xNDEwLTQ2YmYtYjBhOS04YjY2NTZlZDQwYWNcL2RidmZ3eGUtNGU0OWM0OTUtN2IxNS00ODVkLWJkYjUtMmNjMTlkY2M3NDBlLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FihCuOx0S3bW1EhdklO_B3lhY3x_asM0reiEulzIgRs">
+</div>
 
 <h1 class="movie-section-title"><i>Top Rated Movies</i></h1>
 
@@ -6,30 +11,30 @@
 
 <main class="movie-container">
 
-  {{#each this}}
+    {{#each this}}
     {{#if title}}
-      {{> movieTile}}
+    {{> movieTile}}
     {{/if}}
-  {{/each}}
+    {{/each}}
 
 </main>
 
 <!--class for marvel news feed-->
 
 <article class="news-feed">
-  <h1><i>Marvel News Feed</i></h1>
-  <div class="articles">
-    <h3>Articles</h3>
-    <ul type=circle>
-      <li><a href="https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" target="_blank">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe </a></li>
-      <li><a href="https://www.marvel.com/articles/movies/marvel-studios-celebrates-movies" target="_blank">Marvel Studios Celebrates the Movies</a></li>
-      <li><a href="https://www.marvel.com/articles/movies/eternals-first-look-celebrate-movies" target="_blank">'Eternals First Look Reveals New Team of Super Heroes in Globetrotting Adventure</a></li>
-    </ul>
-  </div>
-  <div class="memes">
-    <h3>Memes</h3>
-    <img class="meme" src="https://pm1.narvii.com/6313/4ad7ba5a92283bb466402b3be2ba78f782887897_hq.jpg"/>
-    <img class="meme" src="https://bestofcomicbooks.com/wp-content/uploads/2018/04/final-feature-98.jpg"/>
-    <img class="meme" src="https://funnypicsonly.com/wp-content/uploads/2018/06/Hilarious-Marvel-Memes-That-Will-Make-You-Laugh-21.jpg"/>
-  </div>
+    <h1><i>Marvel News Feed</i></h1>
+    <div class="articles">
+        <h3>Articles</h3>
+        <ul type=circle>
+            <li><a href="https://www.marvel.com/articles/movies/marvel-studios-making-of-marvel-cinematic-universe" target="_blank">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe </a></li>
+            <li><a href="https://www.marvel.com/articles/movies/marvel-studios-celebrates-movies" target="_blank">Marvel Studios Celebrates the Movies</a></li>
+            <li><a href="https://www.marvel.com/articles/movies/eternals-first-look-celebrate-movies" target="_blank">'Eternals First Look Reveals New Team of Super Heroes in Globetrotting Adventure</a></li>
+        </ul>
+    </div>
+    <div class="memes">
+        <h3>Memes</h3>
+        <img class="meme" src="https://pm1.narvii.com/6313/4ad7ba5a92283bb466402b3be2ba78f782887897_hq.jpg" />
+        <img class="meme" src="https://bestofcomicbooks.com/wp-content/uploads/2018/04/final-feature-98.jpg" />
+        <img class="meme" src="https://funnypicsonly.com/wp-content/uploads/2018/06/Hilarious-Marvel-Memes-That-Will-Make-You-Laugh-21.jpg" />
+    </div>
 </article>

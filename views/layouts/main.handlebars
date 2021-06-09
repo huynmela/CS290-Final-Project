@@ -2,77 +2,81 @@
 <html style="font-size: 16px;">
 
 <head>
-  <title>Marvel Fanbase</title>
-  <meta charset="utf-8">
-  <meta name="keywords" content="A community for Marvel fans everywhere!">
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/lib/index.min.js" charset="utf-8" defer></script>
-  <!--^Above script allows for use of handlebars templating-->
-  <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
-
-
-  <link rel="stylesheet" href="/index.css">
-  <link rel="stylesheet" href="/movieListPage.css">
-  <!--This is a 3rd-party stylesheet for search button icon-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- This is 3rd-party stylesheet to make available the font family to be used for this page ("Roboto"). -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-  <!-- This 3rd-party stylesheet incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
+    <title>Marvel Fanbase</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="A community for Marvel fans everywhere!">
+    <script src="/index.js" charset="utf-8" defer></script> <!--refers to the js for the home page-->
+    <script src="movieTileTemplate.js" charset="utf-8" defer></script><!--allows access to createMovieTile in index.js-->
+    <script src="https://cdn.jsdeliver.net/npm/handlebars@latest/lib/index.min.js" charset="utf-8" defer></script>
+    <!--^Above script allows for use of handlebars templating-->
+    <link rel="stylesheet" href="index.css">
+    <!--This is a 3rd-party stylesheet for search button icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- This is 3rd-party stylesheet to make available the font family to be used for this page ("Roboto"). -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- This 3rd-party stylesheet incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
 </head>
 
-<!--class for navbar inside background image-->
-
-<nav class="marvel-logo">
-  <div class="navbar-container">
-    <div class="navbar-items">
-      <a href="/" id="nav-home">Home</a>
-      <a href="/Movies" id="nav-movies">Movies</a>
-      <a href="/CreateAccount" id="nav-register">Create Account</a>
-      <a href="/SignIn" id="nav-signin">Sign In</a>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input id="nav-search-input" type="text" placeholder="Search..." name="search">
-	  <button type="submit" id="nav-search-button"><i class="fa fa-search"></i></button>
-	</form>
-      </div>
-    </div>
-  </div>
-</nav>
-
 <body>
-  {{{body}}}
+
+    <!--class for navbar inside background image-->
+
+    <nav class="marvel-logo">
+        <div class="navbar-container">
+            <div class="navbar-items">
+                <a href="/" id="nav-home">Home</a>
+                <a href="/Movies" id="nav-movies">Movies</a>
+                <a href="/CreateAccount" id="nav-register">Create Account</a>
+                <a href="/SignIn" id="nav-signin">Sign In</a>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input id="nav-search-input" type="text" placeholder="Search..." name="search">
+                        <button type="submit" id="nav-search-button"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    {{{body}}}
+    
+
+    <!--MODAL FOR SIGN IN-->
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="sign-in-modal" class="hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Sign in to your account.</h3>
+                <button type="button" class="modal-sign-in-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="username-input-element">
+                    <label for="username-text-input">Username</label>
+                    <textarea id="username-text-input"></textarea>
+                </div>
+                <div class="username-input-element">
+                    <label for="password-input">Password</label>
+                    <input type="text" id="password-input" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="modal-cancel-button">Cancel</button>
+                <button type="button" class="modal-sign-in-button">Sign in</button>
+            </div>
+        </div>
+    </div>
+
+    <!--class for footer-->
+    <footer class="footer">
+        <div class="footer-content">
+        <p>Web Development  |  Spring 2021  |  Null  |  Luke  |  Melanie  |  Emilie</p>
+        </div>
+    </footer>
+
 </body>
-
-<!--MODAL FOR SIGN IN-->
-
-<div id="modal-backdrop" class="hidden"></div>
-<div id="sign-in-modal" class="hidden">
-  <div class="modal-dialog">
-    <div class="modal-header">
-      <h3>Sign in to your account.</h3>
-      <button type="button" class="modal-sign-in-button">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="username-input-element">
-        <label for="username-text-input">Username</label>
-	<textarea id="username-text-input"></textarea>
-      </div>
-      <div class="username-input-element">
-        <label for="password-input">Password</label>
-        <input type="text" id="password-input" />
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="modal-cancel-button">Cancel</button>
-      <button type="button" class="modal-sign-in-button">Sign in</button>
-    </div>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-content">
-    <p class="footer-text">Footer text, maybe include our names and the year/class this was made for?</p>
-  </div>
-</footer>
 
 </html>
