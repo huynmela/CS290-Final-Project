@@ -5,14 +5,14 @@ h1 {
   text-align: center;
   font-size: 34px;
   font-style: italic;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 15px;
 }
 
 h3 {
   font-size: 26px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 10px;
   background-color: rgb(114, 114, 114);
   margin: 5px;
@@ -25,7 +25,7 @@ h3 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius:25px;
+  border-radius: 10px;
   border-top-left-radius:0px;
   border-top-right-radius:0px;
   /*border-bottom-left-radius:25px;
@@ -76,7 +76,7 @@ h3 {
 .navbar-items a.active {
   background-color:black;
   color:white;
-  padding: 8px;
+  padding-left:10px;
 }
 
 /* search bar inside navbar */
@@ -138,17 +138,12 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color:darkgrey;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .movie-listing .movie-listing-image img {
   margin: 5px;
   border-radius: 25px;
-}
-
-/* individual movie thumbnails/descriptions */
-.movie-listing {
-  max-width: 370px;
 }
 
 /* news feed section */
@@ -157,7 +152,7 @@ h3 {
   margin: 2px;
   padding: 10px;
   margin-bottom:10px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 /* articles section */
@@ -192,6 +187,10 @@ a:focus {
   margin: 5px;
 }
 
+.movie-listing .movie-desc {
+  color: black;
+}
+
 .meme {
   padding: 10px;
   max-height: 450px;
@@ -220,9 +219,158 @@ footer {
   color:darkgray;
   text-align: center;
   font-size: 15px;
-  border-radius: 25px;
-  margin-bottom: 10px;
-  padding: 0.5px;
-  margin-top: 23px;
+  border-radius: 10px;
 }
 
+.footer-content p{
+  color: darkgray;
+}
+
+/* login modal section */
+.modal-body {
+  background: #262626;
+  font-family: 'Times New Roman', Times, serif;
+  color: darkgrey;
+  margin: 0;
+}
+
+.modal-body .p{
+  color: rgb(114, 114, 114);
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.popup .content {
+  position: absolute;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 450px;
+  z-index: 2;
+  transform: translate(-50%,-150%) scale(0);
+  padding: 20px;
+  border-radius: 25px;
+  background: black;
+  box-shadow:  20px 20px 20px #1e1e1e, 
+              -20px -20px 20px #1e1e1e;
+  z-index: 1;
+}
+
+/* for sign in modal text */
+h2 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-weight: 550;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+a {
+font-weight: 600;
+color: white;
+}
+
+.email-and-password-input .validate {
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  color: whitesmoke;
+  background: #262626;
+  box-shadow: inset 5px 5px 5px #232323, 
+              inset -5px -5px 5px #292929;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-container .navbar-sign-in-button {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-left: 1px;
+  background: rgba(120, 120, 120, 0.37);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-container .navbar-sign-in-button:active {  
+  background: linear-gradient(145deg, #222222, #292929);
+  box-shadow:  5px 5px 10px #262626, 
+                -5px -5px 10px #262626;
+  border: none;
+}
+
+.navbar-container .navbar-sign-in-button:hover {
+  background-color: rgb(114, 114, 114);
+  color: white;
+}
+
+.modal-sign-in-button {
+  color: white;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 20px 30px;
+  border-radius: 40px;
+  border: none;
+  background-color: #f0131e;
+  box-shadow:  4px 4px 10px #202020, 
+                -4px -4px 10px #2c2c2c;
+  transition: box-shadow .35s ease !important;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+.modal-sign-in-button:active{
+  background: linear-gradient(145deg,#222222, #292929);
+  box-shadow: 5px 5px 10px #262626, -5px -5px 10px #262626;
+  border: none;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.modal-sign-in-button:hover {
+  background-color: rgb(114, 114, 114);
+  color: white;
+}
+
+.popup.active .content {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%,-50%) scale(1);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.popup .button-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  padding: 2px 5px 7px 5px;
+  cursor: pointer;
+  background: #292929;
+  box-shadow:  3px 3px 9px #1e1e1e, 
+              -3px -3px 9px #1e1e1e;
+}
+
+.popup .button-close:hover {
+  background-color: #f0131e;
+  color: white;
+}
