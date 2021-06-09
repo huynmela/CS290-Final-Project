@@ -1,0 +1,14 @@
+[
+  {
+    "username": "testUser",
+    "passHash": "371",
+    "displayName": "Test User"
+  },
+  {
+    "username": "testMod",
+    "passHash": "371",
+    "displayName": "Test Moderator",
+    "modPriv": "true"
+  }
+]
+
