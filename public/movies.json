@@ -70,5 +70,113 @@
     "settingDate": "202300",
     "favorite": "false"
   },
+  "thorDarkWorld": {
+    "url": "thorDarkWorld",
+    "photo": "https://m.media-amazon.com/images/I/51ERENpRcpL._AC_.jpg",
+    "title": "Thor: The Dark World",
+    "desc": "In ancient times, the gods of Asgard fought and won a war against an evil race known as the Dark Elves. The survivors were neutralized, and their ultimate weapon -- the Aether -- was buried in a secret location. Hundreds of years later, Jane Foster (Natalie Portman) finds the Aether and becomes its host, forcing Thor (Chris Hemsworth) to bring her to Asgard before Dark Elf Malekith (Christopher Eccleston) captures her and uses the weapon to destroy the Nine Realms -- including Earth.",
+    "releaseDate": "20131108",
+    "settingDate": "201300",
+    "favorite": "false"
+  },
+  "incredibleHulk": {
+    "url": "incredibleHulk",
+    "photo": "https://images-na.ssl-images-amazon.com/images/I/61ikONHVOAL._AC_SY741_.jpg",
+    "title": "Thor: The Dark World",
+    "desc": "Scientist Bruce Banner (Edward Norton) desperately seeks a cure for the gamma radiation that contaminated his cells and turned him into The Hulk. Cut off from his true love Betty Ross (Liv Tyler) and forced to hide from his nemesis, Gen. Thunderbolt Ross (William Hurt), Banner soon comes face-to-face with a new threat: a supremely powerful enemy known as The Abomination (Tim Roth).",
+    "releaseDate": "20131108",
+    "settingDate": "200806",
+    "favorite": "false"
+  },
+  "ironMan2": {
+    "url": "ironMan2",
+    "photo": "https://images-na.ssl-images-amazon.com/images/I/71VZVXPhmKL._AC_SL1106_.jpg",
+    "title": "Thor: The Dark World",
+    "desc": "With the world now aware that he is Iron Man, billionaire inventor Tony Stark (Robert Downey Jr.) faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts (Gwyneth Paltrow) and 'Rhodey' Rhodes (Don Cheadle) by his side, Tony must forge new alliances and confront a powerful new enemy.",
+    "releaseDate": "20100507",
+    "settingDate": "200100",
+    "favorite": "false"
+  },
+  "avengersUltron": {
+    "url": "avengersUltron",
+    "photo": "https://images-na.ssl-images-amazon.com/images/I/71wV2rzkFwL._AC_SL1022_.jpg",
+    "title": "Avengers: Age of Ultron",
+    "desc": "When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go terribly awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo) and the rest of the Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the ultimate test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way, they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.",
+    "releaseDate": "20150501",
+    "settingDate": "201500",
+    "favorite": "false"
+  },
+  "thor": {
+    "url": "thor",
+    "photo": "https://flxt.tmsimg.com/assets/p7989358_p_v10_af.jpg",
+    "title": "Thor",
+    "desc": "As the son of Odin (Anthony Hopkins), king of the Norse gods, Thor (Chris Hemsworth) will soon inherit the throne of Asgard from his aging father. However, on the day that he is to be crowned, Thor reacts with brutality when the gods' enemies, the Frost Giants, enter the palace in violation of their treaty. As punishment, Odin banishes Thor to Earth. While Loki (Tom Hiddleston), Thor's brother, plots mischief in Asgard, Thor, now stripped of his powers, faces his greatest threat.",
+    "releaseDate": "20110502",
+    "settingDate": "096500",
+    "favorite": "false"
+  },
+
+  "ironMan3": {
+    "url": "ironMan3",
+    "photo": "https://images-na.ssl-images-amazon.com/images/I/71NN0GU7whL._AC_SY741_.jpg",
+    "title": "Iron Man 3",
+    "desc": "Plagued with worry and insomnia since saving New York from destruction, Tony Stark (Robert Downey Jr.), now, is more dependent on the suits that give him his Iron Man persona -- so much so that every aspect of his life is affected, including his relationship with Pepper (Gwyneth Paltrow). After a malevolent enemy known as the Mandarin (Ben Kingsley) reduces his personal world to rubble, Tony must rely solely on instinct and ingenuity to avenge his losses and protect the people he loves.",
+    "releaseDate": "20130503",
+    "settingDate": "19990101"
+  },
+  "captainAmericaFirstAvenger": {
+    "url": "captainAmericaFirstAvenger",
+    "photo": "https://flxt.tmsimg.com/assets/p8205710_p_v13_ao.jpg",
+    "title": "Captain America: The First Avenger",
+    "desc": "It is 1941 and the world is in the throes of war. Steve Rogers (Chris Evans) wants to do his part and join America's armed forces, but the military rejects him because of his small stature. Finally, Steve gets his chance when he is accepted into an experimental program that turns him into a supersoldier called Captain America. Joining forces with Bucky Barnes (Sebastian Stan) and Peggy Carter (Hayley Atwell), Captain America leads the fight against the Nazi-backed HYDRA organization.",
+    "releaseDate": "20110719",
+    "settingDate": "194200",
+    "favorite": "true"
+  },
+  "antMan": {
+    "url": "antMan",
+    "photo": "https://images-na.ssl-images-amazon.com/images/I/91gokqzBcCL._AC_SL1500_.jpg",
+    "title": "Ant-Man",
+    "desc": "Forced out of his own company by former protégé Darren Cross, Dr. Hank Pym (Michael Douglas) recruits the talents of Scott Lang (Paul Rudd), a master thief just released from prison. Lang becomes Ant-Man, trained by Pym and armed with a suit that allows him to shrink in size, possess superhuman strength and control an army of ants. The miniature hero must use his new skills to prevent Cross, also known as Yellowjacket, from perfecting the same technology and using it as a weapon for evil.",
+    "releaseDate": "20150629",
+    "settingDate": "198900",
+    "favorite": "true"
+  },
+  "avengersInfinity": {
+    "url": "avengersInfinity",
+    "photo": "https://m.media-amazon.com/images/I/81OmkfFqvsL._AC_.jpg",
+    "title": "Avengers: Infinity War",
+    "desc": "Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most powerful enemy yet -- the evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict his twisted will on reality. The fate of the planet and existence itself has never been more uncertain as everything the Avengers have fought for has led up to this moment.",
+    "releaseDate": "20180423",
+    "settingDate": "201806",
+    "favorite": "false"
+  },
+  "captainAmericaWinter": {
+    "url": "captainAmericaWinter",
+    "photo": "https://flxt.tmsimg.com/assets/p8205710_p_v13_ao.jpg",
+    "title": "Captain America: The Winter Soldier",
+    "desc": "After the cataclysmic events in New York with his fellow Avengers, Steve Rogers, aka Captain America (Chris Evans), lives in the nation's capital as he tries to adjust to modern times. An attack on a S.H.I.E.L.D. colleague throws Rogers into a web of intrigue that places the whole world at risk. Joining forces with the Black Widow (Scarlett Johansson) and a new ally, the Falcon, Rogers struggles to expose an ever-widening conspiracy, but he and his team soon come up against an unexpected enemy.",
+    "releaseDate": "20140404",
+    "settingDate": "201400",
+    "favorite": "true"
+  },
+  "antManWasp": {
+    "url": "antManWasp",
+    "photo": "https://images-na.ssl-images-amazon.com/images/I/A1CGAvzql5L._AC_SL1500_.jpg",
+    "title": "Ant-Man and the Wasp",
+    "desc": "Scott Lang is grappling with the consequences of his choices as both a superhero and a father. Approached by Hope van Dyne and Dr. Hank Pym, Lang must once again don the Ant-Man suit and fight alongside the Wasp. The urgent mission soon leads to secret revelations from the past as the dynamic duo finds itself in an epic battle against a powerful new enemy.",
+    "releaseDate": "20180625",
+    "settingDate": "201500",
+    "favorite": "true"
+  },
+  "ironMan": {
+    "url": "ironMan",
+    "photo": "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
+    "title": "Iron Man",
+    "desc": "A billionaire industrialist and genius inventor, Tony Stark (Robert Downey Jr.), is conducting weapons tests overseas, but terrorists kidnap him to force him to build a devastating weapon. Instead, he builds an armored suit and upends his captors. Returning to America, Stark refines the suit and uses it to combat crime and terrorism.",
+    "releaseDate": "20080502",
+    "settingDate": "200800",
+    "favorite": "false"
+  },
   "_locals": {}
 }
