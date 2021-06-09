@@ -23,7 +23,7 @@
     "releaseDate": "20190308",
     "settingDate": "199500",
     "favorite": true
-  }, "blacPanther": {
+  }, "blackPanther": {
     "url":  "blackPanther",
     "photo": "https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg",
     "title": "Black Panther",
@@ -47,7 +47,7 @@
     "releaseDate": "20161104",
     "settingDate": "201611",
     "favorite": false
-  }, "gotg2": {
+  }, "gotg1": {
     "url":  "gotg1",
     "photo": "https://upload.wikimedia.org/wikipedia/en/b/b5/Guardians_of_the_Galaxy_poster.jpg",
     "title": "Guardians of the Galaxy",
