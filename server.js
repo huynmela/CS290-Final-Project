@@ -22,7 +22,16 @@ app.get('*', function(req, res, next) {
 })
 
 app.get('/', function(req, res) {
-  res.status(200).render('home', movieList);
+  var iterator = 0;
+  newList = {};
+  Object.keys(movieList).forEach(key => {
+    if (iterator < 6) {
+      newObName = movieList[key].url;
+      newList[newObName] = movieList[key];
+      iterator++;
+    }
+  })
+  res.status(200).render('home', newList);
 })
 
 app.get('/movies', function(req, res) {
