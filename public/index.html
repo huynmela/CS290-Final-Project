@@ -21,14 +21,12 @@
 
 <body style="background-color: black;">
 
-<!--class for navbar inside background image-->
-
+<!--class for navbar-->
 <div class="navbar-container">
     <div class="navbar-items">
     <a class="active" href="#Home">Home</a>
     <a href="#Movies">Movies</a>
-    <a href="#CreateAccount">Create Account</a>
-    <a href="#SignIn">Sign In</a>
+    <button onclick="togglePopup()" class="navbar-sign-in-button">Sign In</button>
     <div class="search-container">
         <form action="/action_page.php">
             <input type="text" placeholder="Search..." name="search">
@@ -192,6 +190,30 @@
     <p>Web Development  |  Spring 2021  |  Null  |  Luke  |  Melanie  |  Emilie</p>
     </div>
 </footer>
+
+<!--section for modal-->
+<div class="modal-body">
+    <div class="popup" id="PopUp">
+        <div class="content">
+            <!--cancel button-->
+            <div class="button-close" onclick="togglePopup()">×</div>
+            <!--login form-->
+            <h2>Sign in</h2> 
+            <div class="email-and-password-input"><input placeholder="Email" class="validate"></div>
+            <div class="email-and-password-input"><input placeholder="Password" class="validate"></div>
+            <button class="modal-sign-in-button">Submit</button>
+        <p>Don't have an account? <a href="/createacount.html">Create One!</a></p>
+        </div>
+    </div>
+</div>
+
+<!--script for modal-->
+<script>
+function togglePopup() {
+    document.getElementById("PopUp")
+    .classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
