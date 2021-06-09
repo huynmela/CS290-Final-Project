@@ -1,6 +1,7 @@
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
+var fs = require('fs');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -52,6 +53,42 @@ app.use(express.static('public'));
 
 app.get('*', function(req, res) {
   res.status(400).render('404', pageType);
+})
+
+app.post('/movies/:Title/favToggle', function (req, res, next) {
+  var Title = req.params.Title
+  console.log("== Received favToggle request for", Title);
+  if (movieList[Title]) {
+    if (movieList[Title].favorite) {
+      delete movieList[Title].favorite;
+      fs.writeFile(
+        __dirname + '/public/movies.json',
+	JSON.stringify(movieList, null, 2),
+	function(err) {
+	  if (err) {
+	    res.status(500).send("Error writing new data. Try again.");
+	  } else {
+	    res.status(200).send()
+	  }
+	}
+      )
+    } else {
+      movieList[Title].favorite = "true";
+      fs.writeFile(
+	__dirname + '/public/movies.json',
+	JSON.stringify(movieList, null, 2),
+	function(err) {
+	  if (err) {
+	    res.status(500).send("Error writing new data. Try again.");
+	  } else {
+	    res.status(200).send()
+	  }
+	}
+      )
+    }
+  } else {
+    res.status(404).send("The item you are trying to favorite/unfavorite has a bad URL.");
+  }
 })
 
 app.listen(port, function() {

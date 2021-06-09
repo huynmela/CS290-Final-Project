@@ -133,3 +133,7 @@ a:hover,
 a:focus {
   color: #f0131e;
 }
+
+.hidden {
+  display: none;
+}
