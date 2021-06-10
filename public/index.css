@@ -176,6 +176,7 @@ h3 {
     background: #f0f0f0;
     padding: 15px;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .fav-button {
@@ -258,9 +259,9 @@ a:focus {
   background: rgb(114, 114, 114);
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
+/*::-webkit-scrollbar-thumb:hover {
   background:black;
-}
+}*/
 
 /* footer section */
 footer {
