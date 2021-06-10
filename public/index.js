@@ -21,6 +21,7 @@ var navSignin = document.getElementById("nav-signin");
 var popupToggleButton = document.getElementById("popup-toggle-button");
 var popupX = document.getElementById("popup-x");
 var popupSubmit = document.getElementById("popup-submit");
+var navSignout = '';
 
 var currentUser = "";
 
@@ -82,6 +83,10 @@ popupSubmit.addEventListener("click", function() {
   }
 });
 
+navSignout.addEventListener("click", function() {
+  logOut();
+})
+
 /*
  * Create a comment
  */
@@ -116,7 +121,7 @@ function createComment() {
 
         // user input values
         commentText.textContent = commentInput
-        commentAuthorLink.textContent = "testUser"
+        commentAuthorLink.textContent = currentUser.displayName
 
         // then append all information into the variables
         commentContainer[0].append(article);
@@ -135,14 +140,8 @@ function createComment() {
  */
 function getUserData() {
   if (!!document.getElementById("current-user")) {
-    currentUser = document.getElementById("current-user");
-    var userList = require('/users.JSON');
-    for (i = 0; i<userList.length; i++) {
-      if (userList[i] === currentUser) {
-        currentUser = userList[i];
-	console.log("Succesfully logged in as\nUsername:", currentUser.username, "\nDisplay Name:", currentUser.displayName);
-      }
-    }
+    currentUser = JSON.parse(document.getElementById("current-user").textContent);
+    console.log("Succesfully logged in as\nUsername:", currentUser.username, "\nDisplay Name:", currentUser.displayName);
     if (!(currentUser.username && currentUser.displayName)) {
       alert("Error: You have been logged out due to an error in function \"getUserData\" in index.js or \"app.use\" in server.js.");
       currentUser = "";
@@ -278,7 +277,7 @@ function logIn() {
 	//});
 	//res.on('end', function() {
 	  console.log("  -- Login Authorised\n  -- res.body:", event.target.responseText);
-	  currentUser = event.target.responseText;
+	  currentUser = JSON.parse(event.target.responseText);
 	  console.log("  -- currentUser:", currentUser);
           updateDisplayLogin();
 	  popupToggle();
@@ -302,6 +301,23 @@ function register() {
   alert("Registration not yet implemented. Sorry!");
 }
 
+function logOut() {
+  var req = new XMLHttpRequest();
+  req.open('POST', '/logout');
+
+  req.addEventListener('load', function(event) {
+    if (event.target.status === 200) {
+      currentUser = '';
+      updateDisplayLogout();
+      console.log("== Successfully logged out.")
+    } else {
+      alert("Unexpected error when attempting to log out");
+    }
+  })
+
+  req.send();
+}
+
 function clearSigninModal() {
   document.getElementById("username-text-input").value = "";
   document.getElementById("password-input").value = "";
@@ -309,16 +325,31 @@ function clearSigninModal() {
 
 function updateDisplayLogin() {
   navItems = document.getElementById("navbar-items");
-  navSignout = '<a href="/SignOut" id="nav-sign-out">Sign Out</a>'
+  navSignout = '<a id="nav-sign-out">Sign Out</a>'
   navItems.removeChild(navRegister);
   navItems.removeChild(navSignin);
   navMovies.insertAdjacentHTML('afterend', navSignout);
+  navSignout = document.getElementById("nav-sign-out");
+
   if (currentUser.favList) {
     //function for displaying fav status
   }
   console.log("  -- currentUser:", currentUser);
-  console.log("  -- currentUser.username", currentUser.username);
-  console.log("  -- currentUser.displayName", currentUser.displayName);
+  console.log("  -- currentUser.username", currentUser['username']);
+  console.log("  -- currentUser.displayName", currentUser['displayName']);
+}
+
+function updateDisplayLogout() {
+  navItems = document.getElementById("navbar-items");
+  navRegister = '<a id="nav-register">Create Account</a>';
+  navSignin = '<a id="nav-signin">Sign In</a>';
+  navItems.removeChild(navSignout);
+  navMovies.insertAdjacentHTML('afterend', navRegister);
+  navRegister = document.getElementById("nav-register");
+  navRegister.insertAdjacentHTML('afterend', navSignin);
+  navSignin = document.getElementById("nav-signin");
+
+  //function for removing fav status
 }
 
 function popupToggle() {

@@ -14,7 +14,7 @@ var pageType = {"pageType":"page"};			//This is a variable we can change to give
 var movieList = require('./public/movies.json');					//These lists will pull from a JSON file in full implementation
 var userList = require('./public/users.json');
 
-let curUser;
+var curUser = '';
 
 app.get('*', function(req, res, next) {
   pageType.pageType = 'page';
@@ -93,6 +93,8 @@ app.get('/loginAttempt/:username/:passHash', function (req, res, next) {
 	delete clientsideProfile.passHash;
 	console.log("  -- Hash removed before sending:\n\n", clientsideProfile);
 	res.setHeader('Content-Type', 'application/json');
+	curUser = clientsideProfile;
+	movieList.currentUser = curUser;
         res.status(200).send(JSON.stringify(clientsideProfile));
       }
       break;
@@ -101,6 +103,14 @@ app.get('/loginAttempt/:username/:passHash', function (req, res, next) {
   if (! attemptState) {
     next();
   }
+})
+
+app.post('/logout', function(req, res, next) {
+  curUser = '';
+  if (movieList.currentUser) {
+    delete movieList.currentUser;
+  }
+  res.status(200).send;
 })
 
 app.use(express.static('public'));
