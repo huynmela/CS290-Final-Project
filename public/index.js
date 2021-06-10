@@ -11,6 +11,7 @@ var navRegister = document.getElementById("nav-register");
 var navSignin = document.getElementById("nav-signin");
 var activeTab = document.getElementsByClassName("active");
 var navSignout = "";
+var navSearchButton = document.getElementById("nav-search-button");
 
 var favButton = document.getElementsByClassName("fav-button");
 var movieURL = document.getElementsByClassName("movie-URL");
@@ -40,6 +41,10 @@ window.onBeforeUnload = updateActiveTab();
 window.onBeforeUnload = testLog();
 window.onBeforeUnload = getUserData();
 window.onBeforeUnload = clearSigninModal();
+
+navSearchButton.addEventListener("click", function() {
+  performSearch();
+});
 
 navRegister.addEventListener("click", function() {
   popupSetRegister();
@@ -150,6 +155,14 @@ function favToggle(index) {
 
   req.send();
 }
+
+performSearch() {
+  var searchTerm = document.getElementById("nav-search-input").value.trim();
+  var req = new XMLHttpRequest();
+  req.open('GET', searchTerm);
+  //finish
+}
+
 
 function hasher(password) {				// *slaps the roof* this bad boy can fit so many collisions in it
   console.log("== In the hasher");
