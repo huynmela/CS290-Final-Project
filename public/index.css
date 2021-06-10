@@ -159,12 +159,12 @@ h3 {
   border-radius: 10px;
 }
 
-.movie-listing-image img {
+.movie-listing-image {
   margin: 5px;
   border-radius: 25px;
   width: 350px;
   height: 519px;
-  position: relative;
+  position: center;
 }
 
 /*Ported over from movielistpage.css*/
@@ -198,14 +198,23 @@ h3 {
     font-style: italic;
 }
 
+.movie-desc-individual {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 25px;
+    width: 800px;
+    height: 300px;
+    font-size: 24px;
+}
 
 /* news feed section */
 .news-feed {
-  background-color: darkgray;
-  margin: 2px;
-  padding: 10px;
-  margin-bottom:10px;
-  border-radius: 10px;
+    background-color: darkgray;
+    margin: 2px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 /* articles section */
@@ -279,36 +288,75 @@ footer {
   color: darkgray;
 }
 
-/* login modal section */
-.modal-body {
-  background: #262626;
-  font-family: 'Times New Roman', Times, serif;
-  color: darkgrey;
-  margin: 0;
+/*Commenting modal*/
+
+.modal-comment-body {
+    background-color: #A9A9A9;
+    padding: 8px;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    margin: 4px 0;
 }
 
-.modal-body .p{
-  color: rgb(114, 114, 114);
-  padding: 20px;
-  font-family: 'Times New Roman', Times, serif;
+.modal-comment-dialog {
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 4px 0;
+}
+
+.modal-comment-button {
+    background-color: rgb(114, 114, 114);
+    color: white;
+    font-weight: bold;
+    margin-left: 8px;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    text-align: center;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.comment-input-element {
+    width: 100%;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+.comment-text-input {
+    width: 100%;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+#comment-text-input {
+    width: 500px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    border-radius: 10px;
 }
 
 .popup .content {
-  position: absolute;
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 450px;
-  z-index: 2;
-  transform: translate(-50%,-150%) scale(0);
-  padding: 20px;
-  border-radius: 25px;
-  background: black;
-  box-shadow:  20px 20px 20px #1e1e1e, 
-              -20px -20px 20px #1e1e1e;
-  z-index: 1;
+    position: absolute;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 450px;
+    z-index: 2;
+    transform: translate(-50%,-150%) scale(0);
+    padding: 20px;
+    border-radius: 25px;
+    background: black;
+    box-shadow: 20px 20px 20px #1e1e1e, -20px -20px 20px #1e1e1e;
+    z-index: 1;
 }
 
 /* for sign in modal text */
