@@ -164,6 +164,7 @@ h3 {
   border-radius: 25px;
   width: 350px;
   height: 519px;
+  position: relative;
 }
 
 /*Ported over from movielistpage.css*/
