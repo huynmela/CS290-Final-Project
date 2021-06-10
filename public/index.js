@@ -139,8 +139,9 @@ function createComment() {
  * The following section is where functions should be declared
  */
 function getUserData() {
-  if (!!document.getElementById("current-user")) {
+  if (document.getElementById("current-user")) {
     currentUser = JSON.parse(document.getElementById("current-user").textContent);
+    console.log("==Retrived user info:", currentUser);
     console.log("Succesfully logged in as\nUsername:", currentUser.username, "\nDisplay Name:", currentUser.displayName);
     if (!(currentUser.username && currentUser.displayName)) {
       alert("Error: You have been logged out due to an error in function \"getUserData\" in index.js or \"app.use\" in server.js.");
@@ -302,20 +303,16 @@ function register() {
 }
 
 function logOut() {
+  console.log("Attempting logout");
   var req = new XMLHttpRequest();
   req.open('POST', '/logout');
-
-  req.addEventListener('load', function(event) {
-    if (event.target.status === 200) {
-      currentUser = '';
-      updateDisplayLogout();
-      console.log("== Successfully logged out.")
-    } else {
-      alert("Unexpected error when attempting to log out");
-    }
-  })
-
+  
   req.send();
+
+  currentUser = '';
+  updateDisplayLogout();
+  console.log("== Successfully logged out.")
+
 }
 
 function clearSigninModal() {
@@ -330,6 +327,9 @@ function updateDisplayLogin() {
   navItems.removeChild(navSignin);
   navMovies.insertAdjacentHTML('afterend', navSignout);
   navSignout = document.getElementById("nav-sign-out");
+  navSignout.addEventListener("click", function() {
+    logOut();
+  })
 
   if (currentUser.favList) {
     //function for displaying fav status
@@ -340,14 +340,29 @@ function updateDisplayLogin() {
 }
 
 function updateDisplayLogout() {
+  console.log("Updating display for logout");
   navItems = document.getElementById("navbar-items");
   navRegister = '<a id="nav-register">Create Account</a>';
   navSignin = '<a id="nav-signin">Sign In</a>';
-  navItems.removeChild(navSignout);
+  navItems.removeChild(navSignout);i
+  console.log("Signout button should be gone");
   navMovies.insertAdjacentHTML('afterend', navRegister);
   navRegister = document.getElementById("nav-register");
+  console.log("Register button should be present");
   navRegister.insertAdjacentHTML('afterend', navSignin);
+  console.log("Signin button should be present");
   navSignin = document.getElementById("nav-signin");
+
+  navRegister.addEventListener("click", function() {
+    popupSetRegister();
+    popupToggle();
+  });
+
+  navSignin.addEventListener("click", function() {
+    popupSetSignin();
+    popupToggle();
+  });
+
 
   //function for removing fav status
 }

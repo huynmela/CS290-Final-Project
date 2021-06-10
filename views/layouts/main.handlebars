@@ -20,7 +20,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" crossorigin="anonymous">
 
     {{#if currentUser}}
-      <p class="hidden" id="current-user">{{currentUser}}</p>
+      <p class="hidden" id="current-user">
+        {"username": "{{currentUser.username}}",
+        "displayName": "{{currentUser.displayName}}"
+	{{#if currentUser.modPriv}}
+	  , "modPriv": "true"
+	{{/if}}
+	}
+      </p>
     {{/if}}
 </head>
 

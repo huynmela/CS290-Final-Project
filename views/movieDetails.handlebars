@@ -6,10 +6,10 @@
 
     <article class="movie-listing">
         <div class="movie-listing-image">
-            <img src="{{photo}}" alt="" width="350" height="519" />
+            <img src="{{movie.photo}}" alt="" width="350" height="519" />
         </div>
         <p class="movie-desc">
-            {{desc}}
+            {{movie.desc}}
         </p>
     </article>
 </main>
@@ -71,7 +71,7 @@
         <div class="modal-comment-body">
             <div class="comment-input-element">
                 <label for="comment-text-input"></label>
-                <textarea id="comment-text-input">Type here...</textarea> <!--Need to reset it when the user click it on the js-->
+                <textarea id="comment-text-input" placeholder="Type here..."></textarea> <!--Need to reset it when the user click it on the js-->
             </div>
         </div>
         <div class="modal-comment-footer">

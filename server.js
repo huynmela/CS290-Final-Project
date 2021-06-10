@@ -30,6 +30,9 @@ app.get('/', function(req, res) {
       newList[newObName] = movieList[key];
       iterator++;
     }
+  if (curUser) {
+    newList.currentUser = curUser;
+  }
   })
   res.status(200).render('home', newList);
 })
@@ -64,7 +67,11 @@ app.get('/search/:jsonQuery', function (req, res, next) {
 app.get('/movies/:Title', function (req, res, next) {
   var Title = req.params.Title
   if (movieList[Title]) {
-    res.status(200).render('movieDetails', movieList[Title]);
+    var oneMovie = {}
+    oneMovie.movie = JSON.parse(JSON.stringify(movieList[Title]))
+    oneMovie.currentUser = curUser
+    console.log("oneMovie:\n", oneMovie)
+    res.status(200).render('movieDetails', oneMovie);
   } else {
   pageType.pageType = 'film';
   next();
@@ -97,6 +104,7 @@ app.get('/loginAttempt/:username/:passHash', function (req, res, next) {
 	res.setHeader('Content-Type', 'application/json');
 	curUser = clientsideProfile;
 	movieList.currentUser = curUser;
+	console.log("\n\n== movieList.currentUser:\n:", movieList.currentUser);
         res.status(200).send(JSON.stringify(clientsideProfile));
       }
       break;
@@ -108,16 +116,24 @@ app.get('/loginAttempt/:username/:passHash', function (req, res, next) {
 })
 
 app.post('/logout', function(req, res, next) {
+  console.log("Performing logout");
   curUser = '';
   if (movieList.currentUser) {
     delete movieList.currentUser;
   }
+  if (pageType.currentUser) {
+    delete pageType.currentUser;
+  }
+  console.log("Sending 200 status for logout");
   res.status(200).send;
 })
 
 app.use(express.static('public'));
 
 app.get('*', function(req, res) {
+  if (curUser) {
+    pageType.currentUser = curUser;
+  }
   res.status(400).render('404', pageType);
 })
 
