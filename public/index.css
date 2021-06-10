@@ -170,6 +170,7 @@ h3 {
 .movie-holder {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .movie-listing {
@@ -449,8 +450,8 @@ color: white;
   padding-top: 1px;
   padding-bottom: 1px;
   border-radius: 25px;
-  max-width: 350px;
-  max-height: 500px;
+  max-width: 500px;
+  max-height: 350px;
   font-size: 24px;
 }
 
