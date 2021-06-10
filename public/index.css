@@ -170,15 +170,13 @@ h3 {
 .movie-holder {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .movie-listing {
     max-width: 350px;
     background: #f0f0f0;
     padding: 15px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 .fav-button {
