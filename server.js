@@ -38,6 +38,24 @@ app.get('/movies', function(req, res) {
   res.status(200).render('movies', movieList);
 })
 
+app.get('/search/:jsonQuery', function (req, res, next) {
+    var Search = req.params.jsonQuery.toLowerCase().replace(/\W/g, '');
+    // Go through the json to find if the search exists 
+    newList = '';
+    Object.keys(movieList).forEach(key => {
+        if (movieList[key].title.toLowerCase().replace(/\W/g, '').includes(Search)) {
+            newObName = movieList[key].url;
+            newList = movieList[key];
+        }
+    })
+    if (newList) {
+        res.status(200).render('home', newList)
+    } else {
+        next();
+    }
+})
+    
+
 app.get('/movies/:Title', function (req, res, next) {
   var Title = req.params.Title
   if (movieList[Title]) {
