@@ -84,11 +84,13 @@ app.get('/profile/:Name', function (req, res, next) {
 app.get('/loginAttempt/:username/:passHash', function (req, res, next) {
   var attemptState = "";
   for (var i = 0; i < userList.length; i++) {
+    console.log("== Checking for match in object:", userList[i]);
     if (userList[i].username === req.params.username) {
+      console.log("== Username matches!\nComparing stored hash", userList[i].passHash, "with received hash", req.params.passHash);
       if (userList[i].passHash === req.params.passHash) {
-        attemptState = "success";
+        attemptState = "Success!";
         console.log("== Match found for user #" + i + ":\n\n", userList[i]);
-        var clientsideProfile = userList[i];
+        var clientsideProfile = JSON.parse(JSON.stringify(userList[i]));
 	console.log("  -- clientsideProfile is now:\n\n", clientsideProfile);
 	delete clientsideProfile.passHash;
 	console.log("  -- Hash removed before sending:\n\n", clientsideProfile);
