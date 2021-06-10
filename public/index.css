@@ -493,6 +493,7 @@ p.comment-text {
   margin-bottom: 8px;
   font-family: 'Times New Roman', Times, serif;
   border-radius: 10px;
+  text-align: center;
 }
 
 h4 {
@@ -504,6 +505,13 @@ h4 {
 }
 
 .comment-input-element {
+  width: 50%;
+  height: 50%;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 10px;
+}
+
+#comment-text-input {
   width: 50%;
   height: 50%;
   font-family: 'Times New Roman', Times, serif;
