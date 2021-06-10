@@ -28,7 +28,7 @@ for (let i = 0; i<favButton.length; i++) {
   favButton[i].addEventListener ("click", function() {
     favToggle(i);
     console.log("Event listener added for favButton", i)
-    });
+  });
 }
 
 /*
@@ -160,11 +160,34 @@ function favToggle(index) {
   req.send();
 }
 
-performSearch() {
+function performSearch() {
   var searchTerm = document.getElementById("nav-search-input").value.trim();
-  var req = new XMLHttpRequest();
-  req.open('GET', searchTerm);
-  //finish
+  console.log("== Search query received:", searchTerm);
+  if (! searchTerm) {
+    alert("Please enter a search term.");
+  } else {
+    console.log('  -- Attempting search');
+    var req = new XMLHttpRequest();
+    var reqURL = '/search/' + searchTerm;
+    console.log('  -- Searching via URL:', reqURL);
+    req.open('GET', '/search/' + searchTerm);
+    
+    req.setRequestHeader('Content-Type', 'text/html');
+
+    req.addEventListener('load', function(event) {
+      if (event.target.status === 200) {
+        var resURL = '/movies/' + event.target.responseText;
+	console.log('  -- Should now redirect via URL:', resURL);
+        window.open(resURL, _self);
+      } else if (event.target.status === 400) {
+        alert("No result found for that query. This may be an issue with search functionality.");
+      } else {
+        alert("Search failed due to an unexpected server-side issue.");
+      }
+    });
+
+    req.send();
+  }
 }
 
 
