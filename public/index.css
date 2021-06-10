@@ -449,7 +449,7 @@ color: white;
   border-radius: 10px;
 }
 
-.movie-desc {
+.movie-desc-individual {
   background-color: white;
   color: black;
   padding: 8px;
@@ -459,7 +459,7 @@ color: white;
   border-radius: 25px;
   max-width: 500px;
   max-height: 350px;
-  font-size: 24px;
+  font-size: px;
 }
 
 p.comment-text {
