@@ -479,6 +479,8 @@ p.comment-text {
 .modal-comment-dialog {
   border-color: black;
   border-style: solid;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .modal-comment-button {
@@ -489,7 +491,8 @@ p.comment-text {
   padding: 8px;
   margin-top: 8px;
   margin-bottom: 8px;
-  float:left;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 10px;
 }
 
 h4 {
@@ -498,4 +501,11 @@ h4 {
     padding: 7px;
     background-color: rgb(114, 114, 114);
     margin: 5px;
+}
+
+.comment-input-element {
+  width: 50%;
+  height: 50%;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 10px;
 }
