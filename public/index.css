@@ -476,10 +476,26 @@ p.comment-text {
     border-radius: 25px;
 }
 
+.modal-comment-dialog {
+  border-color: black;
+  border-style: solid;
+}
+
+.modal-comment-button {
+  background-color: rgb(114, 114, 114);
+  color: white;
+  font-weight: bold; 
+  margin-left: 8px;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  float:left;
+}
+
 h4 {
-    font-size: 26px;
-    border-radius: 15px;
-    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 7px;
     background-color: rgb(114, 114, 114);
     margin: 5px;
 }
