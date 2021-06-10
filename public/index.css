@@ -159,9 +159,11 @@ h3 {
   border-radius: 10px;
 }
 
-.movie-container .movie-listing-image img {
+.movie-listing-image img {
   margin: 5px;
   border-radius: 25px;
+  width: 300px;
+  height: 420px;
 }
 
 /*Ported over from movielistpage.css*/
