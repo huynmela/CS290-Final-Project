@@ -159,7 +159,7 @@ h3 {
   border-radius: 10px;
 }
 
-.movie-listing .movie-listing-image img {
+.movie-container .movie-listing-image img {
   margin: 5px;
   border-radius: 25px;
 }
