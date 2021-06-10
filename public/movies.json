@@ -71,8 +71,7 @@
     "title": "Thor: The Dark World",
     "desc": "In ancient times, the gods of Asgard fought and won a war against an evil race known as the Dark Elves. The survivors were neutralized, and their ultimate weapon -- the Aether -- was buried in a secret location. Hundreds of years later, Jane Foster (Natalie Portman) finds the Aether and becomes its host, forcing Thor (Chris Hemsworth) to bring her to Asgard before Dark Elf Malekith (Christopher Eccleston) captures her and uses the weapon to destroy the Nine Realms -- including Earth.",
     "releaseDate": "20131108",
-    "settingDate": "201300",
-    "favorite": "false"
+    "settingDate": "201300"
   },
   "incredibleHulk": {
     "url": "incredibleHulk",
@@ -80,8 +79,7 @@
     "title": "Thor: The Dark World",
     "desc": "Scientist Bruce Banner (Edward Norton) desperately seeks a cure for the gamma radiation that contaminated his cells and turned him into The Hulk. Cut off from his true love Betty Ross (Liv Tyler) and forced to hide from his nemesis, Gen. Thunderbolt Ross (William Hurt), Banner soon comes face-to-face with a new threat: a supremely powerful enemy known as The Abomination (Tim Roth).",
     "releaseDate": "20131108",
-    "settingDate": "200806",
-    "favorite": "false"
+    "settingDate": "200806"
   },
   "ironMan2": {
     "url": "ironMan2",
@@ -89,8 +87,7 @@
     "title": "Thor: The Dark World",
     "desc": "With the world now aware that he is Iron Man, billionaire inventor Tony Stark (Robert Downey Jr.) faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts (Gwyneth Paltrow) and 'Rhodey' Rhodes (Don Cheadle) by his side, Tony must forge new alliances and confront a powerful new enemy.",
     "releaseDate": "20100507",
-    "settingDate": "200100",
-    "favorite": "false"
+    "settingDate": "200100"
   },
   "avengersUltron": {
     "url": "avengersUltron",
@@ -98,8 +95,7 @@
     "title": "Avengers: Age of Ultron",
     "desc": "When Tony Stark (Robert Downey Jr.) jump-starts a dormant peacekeeping program, things go terribly awry, forcing him, Thor (Chris Hemsworth), the Incredible Hulk (Mark Ruffalo) and the rest of the Avengers to reassemble. As the fate of Earth hangs in the balance, the team is put to the ultimate test as they battle Ultron, a technological terror hell-bent on human extinction. Along the way, they encounter two mysterious and powerful newcomers, Pietro and Wanda Maximoff.",
     "releaseDate": "20150501",
-    "settingDate": "201500",
-    "favorite": "false"
+    "settingDate": "201500"
   },
   "thor": {
     "url": "thor",
@@ -107,8 +103,7 @@
     "title": "Thor",
     "desc": "As the son of Odin (Anthony Hopkins), king of the Norse gods, Thor (Chris Hemsworth) will soon inherit the throne of Asgard from his aging father. However, on the day that he is to be crowned, Thor reacts with brutality when the gods' enemies, the Frost Giants, enter the palace in violation of their treaty. As punishment, Odin banishes Thor to Earth. While Loki (Tom Hiddleston), Thor's brother, plots mischief in Asgard, Thor, now stripped of his powers, faces his greatest threat.",
     "releaseDate": "20110502",
-    "settingDate": "096500",
-    "favorite": "false"
+    "settingDate": "096500"
   },
   "ironMan3": {
     "url": "ironMan3",
@@ -131,7 +126,7 @@
     "url": "antMan",
     "photo": "https://images-na.ssl-images-amazon.com/images/I/91gokqzBcCL._AC_SL1500_.jpg",
     "title": "Ant-Man",
-    "desc": "Forced out of his own company by former prot�g� Darren Cross, Dr. Hank Pym (Michael Douglas) recruits the talents of Scott Lang (Paul Rudd), a master thief just released from prison. Lang becomes Ant-Man, trained by Pym and armed with a suit that allows him to shrink in size, possess superhuman strength and control an army of ants. The miniature hero must use his new skills to prevent Cross, also known as Yellowjacket, from perfecting the same technology and using it as a weapon for evil.",
+    "desc": "Forced out of his own company by former protégé Darren Cross, Dr. Hank Pym (Michael Douglas) recruits the talents of Scott Lang (Paul Rudd), a master thief just released from prison. Lang becomes Ant-Man, trained by Pym and armed with a suit that allows him to shrink in size, possess superhuman strength and control an army of ants. The miniature hero must use his new skills to prevent Cross, also known as Yellowjacket, from perfecting the same technology and using it as a weapon for evil.",
     "releaseDate": "20150629",
     "settingDate": "198900",
     "favorite": "true"
@@ -142,8 +137,7 @@
     "title": "Avengers: Infinity War",
     "desc": "Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most powerful enemy yet -- the evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict his twisted will on reality. The fate of the planet and existence itself has never been more uncertain as everything the Avengers have fought for has led up to this moment.",
     "releaseDate": "20180423",
-    "settingDate": "201806",
-    "favorite": "false"
+    "settingDate": "201806"
   },
   "captainAmericaWinter": {
     "url": "captainAmericaWinter",
@@ -169,8 +163,7 @@
     "title": "Iron Man",
     "desc": "A billionaire industrialist and genius inventor, Tony Stark (Robert Downey Jr.), is conducting weapons tests overseas, but terrorists kidnap him to force him to build a devastating weapon. Instead, he builds an armored suit and upends his captors. Returning to America, Stark refines the suit and uses it to combat crime and terrorism.",
     "releaseDate": "20080502",
-    "settingDate": "200800",
-    "favorite": "false"
+    "settingDate": "200800"
   },
   "_locals": {}
 }
