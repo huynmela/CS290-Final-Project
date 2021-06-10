@@ -28,7 +28,11 @@ var newCommentText = document.getElementById("comment-text-input");
 var commentPost = document.getElementsByClassName("modal-comment-button");
 
 // Modal comment event listener
-commentPost[0].addEventListener('click', createComment);
+if (commentPost[0]) {
+  commentPost[0].addEventListener('click', function() {
+    createComment()
+  });
+}
 
 for (let i = 0; i<favButton.length; i++) {
   favButton[i].addEventListener ("click", function() {
