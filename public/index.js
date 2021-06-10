@@ -10,12 +10,18 @@ var navMovies = document.getElementById("nav-movies");
 var navRegister = document.getElementById("nav-register");
 var navSignin = document.getElementById("nav-signin");
 var activeTab = document.getElementsByClassName("active");
-var navSignout = NULL;
+var navSignout = "";
 
 var favButton = document.getElementsByClassName("fav-button");
 var movieURL = document.getElementsByClassName("movie-URL");
 
-var currentUser = NULL;
+var navRegister = document.getElementById("nav-register");
+var navSignin = document.getElementById("nav-signin");
+var popupToggleButton = document.getElementById("popup-toggle-button");
+var popupX = document.getElementById("popup-x");
+var popupSubmit = document.getElementById("popup-submit");
+
+var currentUser = "";
 
 for (let i = 0; i<favButton.length; i++) {
   favButton[i].addEventListener ("click", function() {
@@ -33,6 +39,33 @@ window.onBeforeUnload = clearSearch();
 window.onBeforeUnload = updateActiveTab();
 window.onBeforeUnload = testLog();
 window.onBeforeUnload = getUserData();
+window.onBeforeUnload = clearSigninModal();
+
+navRegister.addEventListener("click", function() {
+  popupSetRegister();
+  popupToggle();
+});
+
+navSignin.addEventListener("click", function() {
+  popupSetSignin();
+  popupToggle();
+});
+
+popupToggleButton.addEventListener("click", function() {
+  popupTypeToggle();
+});
+
+popupX.addEventListener("click", function() {
+  popupToggle();
+});
+
+popupSubmit.addEventListener("click", function() {
+  if (popupToggleButton.innerText === "Create one!") {
+    logIn();
+  } else {
+    register();
+  }
+});
 
 /*
  * The following section is where functions should be declared
@@ -49,7 +82,7 @@ function getUserData() {
     }
     if (!(currentUser.username && currentUser.displayName)) {
       alert("Error: You have been logged out due to an error in function \"getUserData\" in index.js or \"app.use\" in server.js.");
-      currentUser = NULL;
+      currentUser = "";
     } else {
       updateDisplayLogin();
     }
@@ -129,30 +162,54 @@ function hasher(password) {				// *slaps the roof* this bad boy can fit so many 
 }
 
 function logIn() {
+  console.log("== Attempting to sign in");
   var username = document.getElementById("username-text-input").value.trim();
   var password = document.getElementById("password-input").value.trim();
-  clearSignInModal();
-  password = hasher(password);				//minimizing time the raw password is stored client-side (never gets server-side)
-  var userList = require('/users.JSON');		//in practice we probably would want to send the hash to server and not the userList to client (especially with such a weak hash function)
-  var i = 0;
-  for (i = 0; i<userList.length; i++) {
-    if (userList[i].username === username) {
-      if (userList[i].passHash === password) {
-        currentUser = userList[i].username;
-	displayName = userList[i].displayName;
-	if (userList[i].favList) {
-	  favList = userList[i].favList;
-	}
+  clearSigninModal();
+
+  if (username && password) {
+    password = hasher(password);				//minimizing time the raw password is stored client-side (never gets server-side)
+  
+    reqURL = '/loginAttempt/' + username + '/' + password;
+    console.log("  -- URL:", reqURL);
+    var req = new XMLHttpRequest();
+    req.open('GET', reqURL);
+
+    req.addEventListener('load', function(event) {
+      if (event.target.status === 200) {
+        // console.log("  -- Login Authorised\n  -- res.body:", event.target.body);
+	//var body = '';
+	//res.on('data', function(chunk) {
+	//  body += chunk;
+	//});
+	//res.on('end', function() {
+	  console.log("  -- Login Authorised\n  -- res.body:", event.target.responseText);
+	  currentUser = event.target.responseText;
+          updateDisplayLogin();
+	  popupToggle();
+	//})
+      } else if (event.target.status === 400) {
+        console.log("  -- Login Rejected");
+        alert("Error: Username/Password combination not accepted");
+      } else {
+        console.log("  -- Login Failed\n\nError:", event.target.response);
+        alert("Failed to log in due to an unexpected error!");
       }
-      break;
-    }
-  }
-  if (!currentUser) {
-    alert("Error: Incorrect username and/or password");
+    })
+
+    req.send();
   } else {
-    alert("Hello," displayName);
-    updateDisplayLogin();
+    alert("Please enter both a username and a password and try again.");
   }
+}
+
+function register() {
+  alert("Registration not yet implemented. Sorry!");
+}
+
+function clearSigninModal() {
+  document.getElementById("username-text-input").value = "";
+  document.getElementById("password-input").value = "";
 }
 
 function updateDisplayLogin() {
@@ -160,8 +217,32 @@ function updateDisplayLogin() {
   navSignout = '<a href="/SignOut" id="nav-sign-out">Sign Out</a>'
   navItems.removeChild(navRegister);
   navItems.removeChild(navSignin);
-  navHome.insertAdjacentHTML('afterend', navSignout);
+  navMovies.insertAdjacentHTML('afterend', navSignout);
   if (currentUser.favList) {
     //function for displaying fav status
+  }
+}
+
+function popupToggle() {
+  document.getElementById("PopUp").classList.toggle("active");
+}
+
+function popupSetSignin() {
+  document.getElementById("popup-type").innerText = "Sign in";
+  document.getElementById("popup-toggle-prompt").innerText = "Don't have an account?";
+  popupToggleButton.innerText = "Create one!";
+}
+
+function popupSetRegister() {
+  document.getElementById("popup-type").innerText = "Register";
+  document.getElementById("popup-toggle-prompt").innerText = "Already have an account?";
+  popupToggleButton.innerText = "Sign in!";
+}
+
+function popupTypeToggle() {
+  if (popupToggleButton.innerText === "Create one!") {
+    popupSetRegister();
+  } else {
+    popupSetSignin()
   }
 }

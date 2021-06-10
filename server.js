@@ -12,7 +12,7 @@ app.set('view engine', 'handlebars');
 var pageType = {"pageType":"page"};			//This is a variable we can change to give more specific 404 error messages
 
 var movieList = require('./public/movies.json');					//These lists will pull from a JSON file in full implementation
-var userList = [];
+var userList = require('./public/users.json');
 
 let curUser;
 
@@ -50,12 +50,34 @@ app.get('/movies/:Title', function (req, res, next) {
 
 app.get('/profile/:Name', function (req, res, next) {
   for (var i = 0; i < userList.length; i++) {
-    if (userList[i].name == req.params.Name) {
+    if (userList[i].username === req.params.Name) {
       res.status(200).render('profile', userList[i]);
     }
   }
   pageType.pageType = 'profile';
   next();
+})
+
+app.get('/loginAttempt/:username/:passHash', function (req, res, next) {
+  var attemptState = "";
+  for (var i = 0; i < userList.length; i++) {
+    if (userList[i].username === req.params.username) {
+      if (userList[i].passHash === req.params.passHash) {
+        attemptState = "success";
+        console.log("== Match found for user #" + i + ":\n\n", userList[i]);
+        var clientsideProfile = userList[i];
+	console.log("  -- clientsideProfile is now:\n\n", clientsideProfile);
+	delete clientsideProfile.passHash;
+	console.log("  -- Hash removed before sending:\n\n", clientsideProfile);
+	res.setHeader('Content-Type', 'application/json');
+        res.status(200).send(JSON.stringify(clientsideProfile));
+      }
+      break;
+    }
+  }
+  if (! attemptState) {
+    next();
+  }
 })
 
 app.use(express.static('public'));
