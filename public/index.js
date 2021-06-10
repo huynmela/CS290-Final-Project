@@ -188,7 +188,7 @@ function performSearch() {
       if (event.target.status === 200) {
         var resURL = '/movies/' + event.target.responseText;
 	console.log('  -- Should now redirect via URL:', resURL);
-        window.open(resURL, _self);
+        window.open(resURL, "_top");
       } else if (event.target.status === 400) {
         alert("No result found for that query. This may be an issue with search functionality.");
       } else {
@@ -273,6 +273,8 @@ function updateDisplayLogin() {
     //function for displaying fav status
   }
   console.log("  -- currentUser:", currentUser);
+  console.log("  -- currentUser.username", currentUser.username);
+  console.log("  -- currentUser.displayName", currentUser.displayName);
 }
 
 function popupToggle() {
