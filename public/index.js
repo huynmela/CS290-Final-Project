@@ -24,6 +24,12 @@ var popupSubmit = document.getElementById("popup-submit");
 
 var currentUser = "";
 
+var newCommentText = document.getElementById("comment-text-input");
+var commentPost = document.getElementsByClassName("modal-comment-button");
+
+// Modal comment event listener
+commentPost[0].addEventListener('click', createComment);
+
 for (let i = 0; i<favButton.length; i++) {
   favButton[i].addEventListener ("click", function() {
     favToggle(i);
@@ -98,7 +104,54 @@ function getUserData() {
   }
 }
     
+/*
+ * Make a comment
+ */
 
+function createComment() {
+    if (currentUser == '') {
+        alert("Please log in to leave a comment.");
+    }
+    else {
+        var commentContainer = document.getElementsByClassName("comments-section");
+        var commentAuthor = document.createElement("p");
+        var commentText = document.createElement("p");
+        var commentAuthorLink = document.createElement("a");
+        var icon = document.createElement("i");
+        var article = document.createElement("article");
+        var div = document.createElement("div");
+        var commentContent = document.createElement("div");
+
+        // define values input by user
+        var commentInput = newCommentText.value;
+        /*        var commentNewAuthor = */
+
+        // reset the inputs
+        newCommentText.value = '';
+
+        commentText.setAttribute("class", "comment-text");
+        commentAuthor.setAttribute("class", "comment-author");
+        commentAuthorLink.setAttribute("href", "#");
+        icon.setAttribute("class", "fas fa-comments");
+        article.setAttribute("class", "comment");
+        div.setAttribute("class", "comment-icon");
+        commentContent.setAttribute("class", "comment-content");
+
+        // user input values
+        commentText.textContent = commentInput
+        commentAuthorLink.textContent = "testUser"
+
+        // then append all information into the variables
+        commentContainer[0].append(article);
+        commentAuthor.append(commentAuthorLink);
+        article.append(div);
+        article.append(commentContent);
+        div.append(icon);
+        commentContent.append(commentText);
+        commentContent.append(commentAuthor);
+
+    }
+}    
 function testLog() {
   console.log("index.js has been included");
 }
