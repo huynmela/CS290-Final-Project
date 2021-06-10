@@ -225,6 +225,7 @@ function logIn() {
 	//res.on('end', function() {
 	  console.log("  -- Login Authorised\n  -- res.body:", event.target.responseText);
 	  currentUser = event.target.responseText;
+	  console.log("  -- currentUser:", currentUser);
           updateDisplayLogin();
 	  popupToggle();
 	//})
@@ -261,6 +262,7 @@ function updateDisplayLogin() {
   if (currentUser.favList) {
     //function for displaying fav status
   }
+  console.log("  -- currentUser:", currentUser);
 }
 
 function popupToggle() {
