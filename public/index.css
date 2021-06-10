@@ -451,7 +451,7 @@ color: white;
   padding-top: 1px;
   padding-bottom: 1px;
   border-radius: 25px;
-}
+  max-width: 200px;
 }
 
 p.comment-text {
