@@ -174,7 +174,7 @@ h3 {
 }
 
 .movie-listing {
-    max-width: 370px;
+    max-width: 350px;
     background: #f0f0f0;
     padding: 15px;
     margin-bottom: 30px;
@@ -431,15 +431,16 @@ color: white;
   color: white;
 }
 
-/* comments section */
-main.comments-section {
-    background-color: #A9A9A9;
-    margin: 2px;
-    padding: 8px;
-    padding-left: 20px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    border-radius: 25px;
+.comments-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: darkgrey;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 p.comment-text {
