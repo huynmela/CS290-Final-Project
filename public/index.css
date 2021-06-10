@@ -465,6 +465,7 @@ p.comment-text {
     border-radius: 25px;
     display: inline-block;
     max-width: 50%;
+    font-size: 14px;
 }
 
 .modal-comment-body {
@@ -494,6 +495,8 @@ p.comment-text {
   font-family: 'Times New Roman', Times, serif;
   border-radius: 10px;
   text-align: center;
+  margin: auto;
+  font-size: 14px;
 }
 
 h4 {
@@ -512,8 +515,9 @@ h4 {
 }
 
 #comment-text-input {
-  width: 50%;
-  height: 50%;
+  width: 200px;
+  height: 100px;
   font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
   border-radius: 10px;
 }
