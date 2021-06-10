@@ -169,8 +169,8 @@ h3 {
 .movie-listing-image-individual img {
   margin: 5px;
   border-radius: 25px;
-  width: 300px;
-  height: 420px;
+  width: 350px;
+  height: 480px;
 }
 
 /*Ported over from movielistpage.css*/
@@ -452,15 +452,35 @@ color: white;
 .movie-desc-individual {
   background-color: white;
   color: black;
-  padding: 8px;
-  padding-left: 20px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 30px;
   border-radius: 25px;
-  max-width: 500px;
-  max-height: 350px;
-  font-size: px;
+  width: 800px;
+  height: 300px;
+  font-size: 32px;
+  margin-top: 80px;
 }
+
+/*.movie-desc-individual {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  border-radius: 25px;
+  max-width: 300px;
+  height: 420px;
+  font-size: 23px;
+  margin: 5px;
+}
+
+.movie-info {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  border-radius: 25px;
+  max-width: 300px;
+  height: 420px;
+  font-size: 23px;
+  margin: 5px;
+}*/
 
 p.comment-text {
     background-color: rgb(219 219 219 / 0.79);
