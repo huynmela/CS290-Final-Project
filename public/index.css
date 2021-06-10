@@ -167,14 +167,6 @@ h3 {
   position: center;
 }
 
-.movie-listing-image-individual {
-    margin: 5px;
-    border-radius: 25px;
-    width: 350px;
-    height: 519px;
-    position: center;
-}
-
 /*Ported over from movielistpage.css*/
 .movie-holder {
     display: flex;
@@ -213,8 +205,7 @@ h3 {
     border-radius: 25px;
     width: 800px;
     height: 300px;
-    font-size: 32px;
-    margin-top: 80px;
+    font-size: 24px;
 }
 
 /* news feed section */
