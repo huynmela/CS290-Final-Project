@@ -3,12 +3,13 @@
  
 An interactive website based on Marvel movies (highlighting a chronological timeline) where a user can favorite movies, publicly comment on different forums under each movie.
 
-Installation
+# Installation
 Download node.js and npm (installing node will also install npm)
 
-Clone the repo
+# Clone the repo
 
 git clone https://github.com/huynmela/CS290-Final-Project.git
-Usage
+
+# Usage
 npm start
-Visit your localhost at the port the console provides: http://localhost:PORT/
+Visit your localhost at the port the console provides: http://localhost:3000/
