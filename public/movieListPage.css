@@ -5,6 +5,7 @@
 }
 
 .movie-listing {
+  max-width: 370px;
   background: #f0f0f0;
   padding: 15px;
   margin-bottom: 30px;
