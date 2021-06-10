@@ -39,18 +39,23 @@ app.get('/movies', function(req, res) {
 })
 
 app.get('/search/:jsonQuery', function (req, res, next) {
+    console.log("== Received search request with parameter", req.params.jsonQuery);
     var Search = req.params.jsonQuery.toLowerCase().replace(/\W/g, '');
     // Go through the json to find if the search exists 
-    newList = '';
+    console.log("  -- Modified search term:", Search);
+    resURL = '';
     Object.keys(movieList).forEach(key => {
-        if (movieList[key].title.toLowerCase().replace(/\W/g, '').includes(Search)) {
-            newObName = movieList[key].url;
-            newList = movieList[key];
-        }
+        if (movieList[key].title) {
+            if (movieList[key].title.toLowerCase().replace(/\W/g, '').includes(Search)) {
+                resURL = movieList[key].url;
+            }
+	}
     })
-    if (newList) {
-        res.status(200).render('home', newList)
+    if (resURL) {
+        console.log('  -- Successful search! Returning partial URL:', resURL);
+        res.status(200).send(resURL);
     } else {
+        console.log('  -- Search failed. Passing to next route.');
         next();
     }
 })
