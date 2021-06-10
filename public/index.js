@@ -73,6 +73,10 @@ popupSubmit.addEventListener("click", function() {
 });
 
 /*
+ * 
+ * /
+
+/*
  * The following section is where functions should be declared
  */
 function getUserData() {
