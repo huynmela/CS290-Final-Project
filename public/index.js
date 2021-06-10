@@ -14,6 +14,8 @@ var activeTab = document.getElementsByClassName("active");
 var favButton = document.getElementsByClassName("fav-button");
 var movieURL = document.getElementsByClassName("movie-URL");
 
+var movieData = [];
+
 for (let i = 0; i<favButton.length; i++) {
   favButton[i].addEventListener ("click", function() {
     favToggle(i);
@@ -109,20 +111,22 @@ function titleMatchesQuery(title, search) {
    * author contains the search query.
    */
   search = search.trim().toLowerCase();
-  return (movie.title + " " + movie.desc).toLowerCase().indexOf(search) >= 0;
+  return (title).toLowerCase().indexOf(search) >= 0;
 }
 
 function updateSearch() {
+  console.log('Entered updateSearch()');
   /*
    * Grab the search query from the navbar search box.
    */
-  var search = document.getElementById('navbar-search-input').value;
-
+  var search = document.getElementById('nav-search-input').value;
+  console.log('Search: ', search);
   /*
    * Remove all twits from the DOM temporarily.
    */
-  var movieHolder = document.querySelector('.movie-container');
+  var movieHolder = document.querySelector('movie-container');
   if (movieHolder) {
+
     while (movieHolder.lastChild) {
       movieHolder.removeChild(movieHolder.lastChild);
     }
@@ -133,17 +137,46 @@ function updateSearch() {
    * if they match the current search query.
    */
   movieData.forEach(function (movie) {
-    if (twitMatchesSearchQuery(movie, search)) {
+    console.log('comparing movie.title and search term,');
+    console.log('movie.title: ', movie.title);
+    console.log('search term: ', search);
+    if (titleMatchesQuery(movie.title, search)) {
       createMovieCard(movie.photo, movie.title, movie.desc);
     }
   });
 }
 
+function parser(movie) {
+  var movieObj = {}
+  console.log('movie in parser: ', movie)
+
+  var moviePhoto = movie.querySelector('movie-photo');
+  console.log(moviePhoto)
+  movieObj.photo = moviePhoto.textContent();
+
+  var movieDesc = movie.querySelector('movie-desc');
+  movieObj.desc = movieDesc.textContent.trim();
+
+  var movieTitle = movie.querySelector('movie-title');
+  movieObj.title = movieTitle.textContent.trim();
+
+  var favorite = movie.querySelector('fas');
+  if (favorite){
+    movieObj.favorite = 'true';
+  }
+
+  return movieObj;
+}
 /*
  * Wait until the DOM content is loaded, and then hook up UI interactions, etc.
  */
 window.addEventListener('DOMContentLoaded', function () {
-  console.log("DOM Content is loaded")
+  console.log("DOM Content is loaded");
+  var moviesOnScreen = document.getElementsByClassName('movie-listing');
+  for (var i = 0; i < moviesOnScreen.length; i++) {
+    movieData.push(parser(moviesOnScreen[i]));
+  }
+  console.log('movieData: ', movieData);
   var searchButton = document.getElementById('nav-search-button');
   if (searchButton) {
     console.log("Search button successfully located")

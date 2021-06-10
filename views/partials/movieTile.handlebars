@@ -2,12 +2,14 @@
   <a href="/movies/{{url}}">
     <img class="photo" src="{{photo}}" alt="" width="350" height="420" class="movie-listing-image"/>
   </a>
-    <p class="movie-desc">
+    <p class="movie-desc" id="movieDesc">
         {{desc}}
     </p>
     {{#if favorite}}
-      <button class="fav-button"><i class="fas fa-star"></i></button>
+      <button class="fav-button" id="favorite"><i class="fas fa-star"></i></button>
     {{else}}
       <button class="fav-button"><i class="far fa-star"></i></button>
     {{/if}}
+    <p class="hidden movie-URL">{{url}}</p>
+    <p class="hidden movie-photo" id="moviePhoto">{{photo}}</p>
 </article>
